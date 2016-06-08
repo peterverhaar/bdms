@@ -279,16 +279,7 @@
                 <text variable="issue" prefix="nr. " suffix=""/>
               </group>
               <text macro="locators"/>
-              <group delimiter="" prefix="" suffix=" ">
-                <text variable="URL" prefix=", " suffix="" text-decoration="underline"/>
-                <group prefix="" suffix="">
-                  <date variable="accessed" prefix=" " suffix="">
-                    <date-part name="day" form="numeric" prefix="" suffix=" "/>
-                    <date-part name="month" form="long" prefix="" suffix=" "/>
-                    <date-part name="year" form="long" prefix="" suffix=""/>
-                  </date>
-                </group>
-              </group>
+          
             </else>
           </choose>
         </if>
