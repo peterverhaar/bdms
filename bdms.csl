@@ -903,9 +903,9 @@
                   <text variable="publisher" prefix="" suffix=" " />
                   <text variable="institution" prefix="" suffix=""/>
                   <text variable="URL" prefix="&lt;" suffix="&gt;"/>
-
+                  <text macro="pages" prefix=" "/>
                 <text macro="locators"/>
-  <text macro="pages" prefix=" "/>
+
 
               </group>
 
@@ -989,7 +989,7 @@
               </names>
               <text variable="title" prefix="" suffix="" quotes="true"/>
               <group delimiter=", " prefix=", " suffix="">
-                <text variable="container-title" prefix="" suffix=" sdgsdfgsdfg " font-style="italic"/>
+                <text variable="container-title" prefix="" suffix="" font-style="italic"/>
                 <group delimiter=" " prefix="" suffix="">
                   <text variable="volume" prefix="" suffix=""/>
                 </group>
