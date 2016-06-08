@@ -441,7 +441,7 @@
           <group delimiter=", " suffix=".">
             <text macro="author"/>
             <text variable="title" text-case="title" prefix="&quot;" suffix="&quot;"/>
-            <text variable="container-title" prefix="" suffix="" font-style="italic"/>
+            <text variable="container-title" prefix="in: " suffix="" font-style="italic"/>
             <group delimiter=" ">
               <text variable="volume"/>
               <text variable="issue"/>
