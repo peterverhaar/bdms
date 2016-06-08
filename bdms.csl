@@ -247,14 +247,7 @@
                   </date>
                 </group>
                 <text macro="locators"/>
-                <text variable="URL" prefix="&lt;" suffix="&gt;"/>
-                <group>
-                  <date variable="accessed" prefix=" " suffix="">
-                    <date-part name="day" form="numeric" prefix="" suffix=" "/>
-                    <date-part name="month" form="long" prefix="" suffix=" "/>
-                    <date-part name="year" form="long" prefix="" suffix=""/>
-                  </date>
-                </group>
+               
               </group>
             </else-if>
             <else-if type="webpage">
@@ -479,7 +472,7 @@
           </group>
         </else-if>
         <else-if type="report">
-          <group delimiter=", ">
+            <group delimiter=", " suffix=".">
             <text macro="author"/>
             <text variable="title" prefix="" suffix="" font-style="italic"/>
             <group prefix="(" suffix=")">
@@ -496,7 +489,7 @@
           </group>
         </else-if>
         <else-if type="paper-conference">
-          <group delimiter=", ">
+          <group delimiter=", " suffix=".">
             <text macro="author"/>
             <text variable="title" prefix="&quot;" suffix="&quot;"/>
             <group prefix="in " suffix="">
