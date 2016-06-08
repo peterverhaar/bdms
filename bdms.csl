@@ -371,6 +371,7 @@
         <if type="book">
           <group delimiter=", " suffix=".">
             <text macro="author"/>
+            <text macro="editor-translator"/>
             <text variable="title" text-case="title" prefix="" suffix="" font-style="italic"/>
             <group prefix=" " delimiter=", " suffix=".">
               <group prefix="(" suffix=")">
