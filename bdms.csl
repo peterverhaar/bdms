@@ -17,7 +17,7 @@
     </contributor>
     <category citation-format="author-date"/>
     <category field="law"/>
-    <updated>2016-06-08T10:55:21+00:00</updated>
+    <updated>2016-06-08T09:09:31+00:00</updated>
     <rights>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0
       License</rights>
   </info>
@@ -235,7 +235,7 @@
               <group delimiter=", ">
                 <text macro="author"/>
                 <text variable="title" prefix="&quot;" suffix="&quot;"/>
-                  <group prefix="in: " delimiter=", ">
+                <group prefix="in: " delimiter=", ">
                   <text macro="editor-translator"/>
                   <text variable="container-title" prefix="" suffix="" font-style="italic"/>
                 </group>
@@ -247,7 +247,6 @@
                   </date>
                 </group>
                 <text macro="locators"/>
-               
               </group>
             </else-if>
             <else-if type="webpage">
@@ -279,7 +278,6 @@
                 <text variable="issue" prefix="nr. " suffix=""/>
               </group>
               <text macro="locators"/>
-          
             </else>
           </choose>
         </if>
@@ -431,8 +429,8 @@
                 <date-part name="year" form="long" prefix="" suffix=""/>
               </date>
             </group>
-            <text variable="URL" prefix="&lt;" suffix="&gt;"/>
             <text macro="pages" prefix=" "/>
+            <text variable="URL" prefix="&lt;" suffix="&gt;"/>
           </group>
         </else-if>
         <else-if type="article-newspaper">
@@ -463,7 +461,7 @@
           </group>
         </else-if>
         <else-if type="report">
-            <group delimiter=", " suffix=".">
+          <group delimiter=", " suffix=".">
             <text macro="author"/>
             <text variable="title" prefix="" suffix="" font-style="italic"/>
             <group prefix="(" suffix=")">
@@ -475,8 +473,8 @@
                 <date-part name="year" form="long" prefix="" suffix=""/>
               </date>
             </group>
-            <text variable="URL" prefix="&lt;" suffix="&gt;"/>
             <text macro="pages" prefix=" "/>
+            <text variable="URL" prefix="&lt;" suffix="&gt;"/>
           </group>
         </else-if>
         <else-if type="paper-conference">
