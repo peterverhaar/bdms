@@ -469,16 +469,17 @@
 
                 <text macro="locators"/>
 
-                <group delimiter="" prefix="" suffix=" ">
-                  <text variable="URL" prefix="&lt;" suffix="&gt;"/>
-                  <group prefix="" suffix="">
+
+                  <text variable="URL" prefix="&lt;" suffix="&gt;" />
+                  
+                  <group >
                     <date variable="accessed" prefix=" " suffix="">
                       <date-part name="day" form="numeric" prefix="" suffix=" "/>
                       <date-part name="month" form="long" prefix="" suffix=" "/>
                       <date-part name="year" form="long" prefix="" suffix=""/>
                     </date>
                   </group>
-                </group>
+                
               </group>
             </else-if>
 
@@ -926,7 +927,7 @@
                 </group>
 
 
-                <group delimiter=" " >
+                <group delimiter=" sdfgsdfg  " >
 
                   <text variable="publisher-place" prefix="" suffix=":"/>
 
