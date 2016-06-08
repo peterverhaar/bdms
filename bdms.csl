@@ -413,19 +413,19 @@
 
                 <text variable="title" prefix="" suffix="" font-style="italic"/>
 
-                <group suffix="">
-                  <text variable="publisher-place" prefix="" suffix=": "/>
-                  <names variable="publisher" prefix="" suffix=" ">
-                    <name delimiter="; " form="long" initialize-with=""/>
-                  </names>
-                  <date variable="issued" prefix="" suffix="">
-                    <date-part name="year" form="long" prefix="" suffix=""/>
-
-                  </date>
-
-
-
-                </group>
+                  <group prefix="(" suffix=")">
+                      <text variable="publisher-place" prefix="" suffix=": "/>
+                      <names variable="publisher" prefix="" suffix=" ">
+                          <name delimiter="; " form="long" initialize-with=""/>
+                      </names>
+                      <date variable="issued" prefix="" suffix="">
+                          <date-part name="year" form="long" prefix="" suffix=""/>
+                          
+                      </date>
+                      
+                      
+                      
+                  </group>
 
 
 
@@ -926,7 +926,7 @@
                 </group>
 
 
-                <group delimiter=" " prefix="(" suffix=")">
+                <group delimiter=" " >
 
                   <text variable="publisher-place" prefix="" suffix=":"/>
 
@@ -939,11 +939,11 @@
                 
 
 
-                <text macro="locators"/>
+          
                   <text macro="pages" prefix=" "/>
 
                 <group delimiter="" prefix="" suffix=" ">
-                  <text variable="URL" prefix=", " suffix="" text-decoration="underline"/>
+                  <text variable="URL" prefix="&lt;" suffix="&gt;" text-decoration="underline"/>
                   <group prefix="" suffix="">
                     <date variable="accessed" prefix=" " suffix="">
                       <date-part name="day" form="numeric" prefix="" suffix=" "/>
