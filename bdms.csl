@@ -796,7 +796,7 @@
                   </date>
                 </group>
 
-
+                  <text variable="URL" prefix="&lt;" suffix="&gt;"/>
   
 
 
@@ -900,8 +900,7 @@
 
 
                 </group>
-                  <text variable="publisher" prefix="" suffix=" " />
-                  <text variable="institution" prefix="" suffix=""/>
+
                   <text variable="URL" prefix="&lt;" suffix="&gt;"/>
                   <text macro="pages" prefix=" "/>
                 <text macro="locators"/>
