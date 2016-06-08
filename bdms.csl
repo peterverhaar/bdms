@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="note">
+<!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
   <info>
     <title>BDMS Stylesheet</title>
-    <id>http://www.bookandbyte.org/bdms.csl</id>
+    <id>http://www.zotero.org/styles/bdms-stylesheet</id>
+    <link rel="self" href="http://www.zotero.org/styles/bdms-stylesheet"/>
     <author>
       <name>Peter Verhaar</name>
     </author>
@@ -17,7 +19,7 @@
     </contributor>
     <category citation-format="author-date"/>
     <category field="law"/>
-    <updated>2016-06-08T11:28:31+00:00</updated>
+    <updated>2016-06-08T09:31:40+00:00</updated>
     <rights>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0
       License</rights>
   </info>
@@ -480,7 +482,7 @@
         <else-if type="paper-conference">
           <group delimiter=", " suffix=".">
             <text macro="author"/>
-            <text variable="title" prefix="&quot; sdfasdf " suffix="&quot;"/>
+            <text variable="title" prefix="&quot;" suffix="&quot;"/>
             <group prefix="in " suffix="">
               <text macro="editor-translator" suffix=", "/>
               <text variable="container-title" prefix="" suffix="" font-style="italic"/>
@@ -520,30 +522,30 @@
           </group>
         </else-if>
         <else>
-            <group delimiter=", " suffix=".">
-          <names variable="author" prefix="" suffix=", ">
-            <name et-al-min="6" et-al-use-first="6" delimiter="; " name-as-sort-order="all" sort-separator=", " form="long"/>
-          </names>
-          <text variable="title" prefix="" suffix="" quotes="true"/>
-          <group delimiter=", " prefix=", " suffix="">
-            <text variable="container-title" prefix="" suffix="" font-style="italic"/>
-            <group delimiter=" " prefix="" suffix="">
-              <text variable="volume" prefix="" suffix=""/>
+          <group delimiter=", " suffix=".">
+            <names variable="author" prefix="" suffix=", ">
+              <name et-al-min="6" et-al-use-first="6" delimiter="; " name-as-sort-order="all" sort-separator=", " form="long"/>
+            </names>
+            <text variable="title" prefix="" suffix="" quotes="true"/>
+            <group delimiter=", " prefix=", " suffix="">
+              <text variable="container-title" prefix="" suffix="" font-style="italic"/>
+              <group delimiter=" " prefix="" suffix="">
+                <text variable="volume" prefix="" suffix=""/>
+              </group>
+              <text variable="issue" prefix="nr. " suffix=""/>
             </group>
-            <text variable="issue" prefix="nr. " suffix=""/>
+            <text macro="locators"/>
+            <group delimiter="" prefix="" suffix=" ">
+              <text variable="URL" prefix="&lt;" suffix="&gt;"/>
+              <group prefix="" suffix="">
+                <date variable="accessed" prefix=" " suffix="">
+                  <date-part name="day" form="numeric" prefix="" suffix=" "/>
+                  <date-part name="month" form="long" prefix="" suffix=" "/>
+                  <date-part name="year" form="long" prefix="" suffix=""/>
+                </date>
+              </group>
+            </group>
           </group>
-          <text macro="locators"/>
-          <group delimiter="" prefix="" suffix=" ">
-            <text variable="URL" prefix="&lt;" suffix="&gt;"/>
-            <group prefix="" suffix="">
-              <date variable="accessed" prefix=" " suffix="">
-                <date-part name="day" form="numeric" prefix="" suffix=" "/>
-                <date-part name="month" form="long" prefix="" suffix=" "/>
-                <date-part name="year" form="long" prefix="" suffix=""/>
-              </date>
-            </group>
-          </group>
-            </group>
         </else>
       </choose>
     </layout>
