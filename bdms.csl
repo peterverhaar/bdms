@@ -903,7 +903,6 @@
 
                   <text variable="URL" prefix="&lt;" suffix="&gt;"/>
                   <text macro="pages" prefix=" "/>
-                <text macro="locators"/>
 
 
               </group>
