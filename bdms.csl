@@ -900,6 +900,7 @@
 
 
                 </group>
+                  <text variable="publisher" prefix="" suffix=" " />
                   <text variable="institution" prefix="" suffix=""/>
                   <text variable="URL" prefix="" suffix=""/>
 
