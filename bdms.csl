@@ -485,7 +485,7 @@
           <group delimiter=", " suffix=".">
             <text macro="author"/>
             <text variable="title" prefix="&quot;" suffix="&quot;"/>
-            <group prefix="in " suffix="">
+            <group prefix="in: " suffix="">
               <text macro="editor-translator" suffix=", "/>
               <text variable="container-title" prefix="" suffix="" font-style="italic"/>
             </group>
