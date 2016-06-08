@@ -503,7 +503,7 @@
               <text macro="editor-translator" suffix=", "/>
               <text variable="container-title" prefix="" suffix="" font-style="italic"/>
             </group>
-            <group delimiter=" ">
+            <group delimiter=" " prefix="(" suffix=")">
               <text variable="publisher-place" prefix="" suffix=":"/>
               <text variable="publisher" prefix="" suffix=","/>
               <date variable="issued" prefix="" suffix="">
