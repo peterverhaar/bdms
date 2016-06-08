@@ -927,7 +927,7 @@
                 </group>
 
 
-                <group delimiter=" sdfgsdfg  " >
+                <group delimiter=" " >
 
                   <text variable="publisher-place" prefix="" suffix=":"/>
 
@@ -995,7 +995,7 @@
               </group>
               <text macro="locators"/>
               <group delimiter="" prefix="" suffix=" ">
-                <text variable="URL" prefix=", " suffix="" text-decoration="underline"/>
+                <text variable="URL" prefix="&lt;" suffix="&gt;" />
                 <group prefix="" suffix="">
                   <date variable="accessed" prefix=" " suffix="">
                     <date-part name="day" form="numeric" prefix="" suffix=" "/>
