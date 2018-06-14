@@ -139,12 +139,13 @@ $filename =  basename($_SERVER['PHP_SELF'])
 
 																	// Load the XML source
 																	$xml = new DOMDocument;
-																	$xml->load('/Applications/MAMP/htdocs/Lydgate/XSLT/lydgate.xml');
+																	$xml->load('lydgate.xml');
 
 																	$xsl = new DOMDocument;
-																	$xsl->load('/Applications/MAMP/htdocs/Lydgate/XSLT/' . $stylesheet );
+																	$xsl->load( $stylesheet );
 
 																	// Configure the transformer
+
 																	$proc = new XSLTProcessor;
 																	$proc->importStyleSheet($xsl); // attach the xsl rules
 
@@ -172,10 +173,10 @@ $filename =  basename($_SERVER['PHP_SELF'])
 
 																	// Load the XML source
 																	$xml = new DOMDocument;
-																	$xml->load('/Applications/MAMP/htdocs/Lydgate/XSLT/lydgate.xml');
+																	$xml->load('lydgate.xml');
 
 																	$xsl = new DOMDocument;
-																	$xsl->load('/Applications/MAMP/htdocs/Lydgate/XSLT/' . $stylesheet );
+																	$xsl->load( $stylesheet );
 
 																	// Configure the transformer
 																	$proc = new XSLTProcessor;
