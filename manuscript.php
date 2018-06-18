@@ -1,9 +1,14 @@
+
 <?php
 /*
 Template Name: Manuscript
 */
 ?>
 
+
+
+					  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+					</script>
 
 
 <?php
@@ -15,196 +20,223 @@ Template Name: Manuscript
  * and that other 'pages' on your WordPress site may use a
  * different template.
  *
- * @link    https://codex.wordpress.org/Template_Hierarchy
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Shapely
+ * @package Flash
  */
 
 get_header(); ?>
-<?php $layout_class = shapely_get_layout_class(); ?>
-	<div class="row">
-		<?php
-		if ( 'sidebar-left' == $layout_class ) :
-			get_sidebar();
-		endif;
-		?>
+
+	<?php
+	/**
+	 * flash_before_body_content hook
+	 */
+	do_action( 'flash_before_body_content' ); ?>
 
 
 
-																<style>
+					  <script>
 
-																#lydgate-wrapper {
-																    width: 100%;
 
-																    overflow: hidden; /* will contain if #lydgate-first is longer than #lydgate-second */
-																}
-																#lydgate-left-menu {
-																    width: 49.5%;
-																    float:left; /* add this */
+					  $(document).ready(function(){
 
-																}
-																#lydgate-right-menu{
+							$('#left-transcription').css('display', 'block');
+							$('#left-facsimile').css('display', 'none');
+							$('#left-introduction').css('display', 'none');
 
-																    width: 49.5%;
-																    overflow: hidden; /* if you don't want #lydgate-second to wrap below #lydgate-first */
-																}
+							$('#right-transcription').css('display', 'none');
+							$('#right-facsimile').css('display', 'block');
+							$('#right-introduction').css('display', 'none');
 
-																#lydgate-left-main {
+					      $("#lydgate-left-transcription").click(function(){
+									$('#left-transcription').css('display', 'block');
+									$('#left-facsimile').css('display', 'none');
+									$('#left-introduction').css('display', 'none');
 
-																		padding-top: 30px;
-																    width: 49.5%;
-																    float:left; /* add this */
-color: black ;
-																}
-																#lydgate-right-main {
-																		padding-top: 30px;
+					      });
 
-																    width: 49.5%;
-																    overflow: hidden; /* if you don't want #lydgate-second to wrap below #lydgate-first */
-																}
-																#lydgate-button {
-																  float: left;
-																  background-color: #efeff5 ;
-																  padding: 6px 20px 6px 20px ;
-																  margin-left: 5px;
+					      $("#lydgate-left-facsimile").click(function(){
+									$('#left-facsimile').css('display', 'block');
+									$('#left-transcription').css('display', 'none');
+									$('#left-introduction').css('display', 'none');
+					      });
 
-																}
+					      $("#lydgate-left-introduction").click(function(){
+									$('#left-transcription').css('display', 'none');
+									$('#left-facsimile').css('display', 'none');
+									$('#left-introduction').css('display', 'block');
+					      });
 
-														</style>
+					      $("#lydgate-right-transcription").click(function(){
+									$('#right-transcription').css('display', 'block');
+									$('#right-facsimile').css('display', 'none');
+									$('#right-introduction').css('display', 'none');
+					      });
 
-																<div id = "lydgate-wrapper">
+					      $("#lydgate-right-facsimile").click(function(){
+									$('#right-transcription').css('display', 'none');
+									$('#right-facsimile').css('display', 'block');
+									$('#right-introduction').css('display', 'none');
+					      });
+
+					      $("#lydgate-right-introduction").click(function(){
+									$('#right-transcription').css('display', 'none');
+									$('#right-facsimile').css('display', 'none');
+									$('#right-introduction').css('display', 'block');
+					      });
+
+					  });
+					  </script>
+
+
+					  <style>
+
+					  #lydgate-wrapper {
+								margin-top: 30px;
+								margin-bottom: 30px ;
+					      width: 100%;
+
+					      overflow: hidden; /* will contain if #lydgate-first is longer than #lydgate-second */
+					  }
+
+						#lydgate-wrapper h1 {
+							font-size: 200%;
+							margin-bottom: 20px;
+						}
+
+					  #lydgate-left-menu {
+					      width: 49.5%;
+					      float:left; /* add this */
+
+					  }
+					  #lydgate-right-menu{
+
+					      width: 49.5%;
+					      overflow: hidden; /* if you don't want #lydgate-second to wrap below #lydgate-first */
+					  }
+
+					  #lydgate-left-main {
+					      width: 49.5%;
+					      float:left; /* add this */
+
+								padding: 30px 10px 30px 10px ;
+					  }
+					  #lydgate-right-main {
+
+					      width: 49.5%;
+								padding: 30px 10px 30px 10px ;
+					      overflow: hidden; /* if you don't want #lydgate-second to wrap below #lydgate-first */
+					  }
+					  #lydgate-button {
+					    float: left;
+					    background-color: #dadfe8 ;
+							color: !important white ;
+					    padding: 6px 20px 6px 20px ;
+					    margin-left: 5px;
+
+					  }
+
+					  </style>
+
+
+					<div id = "lydgate-wrapper">
+
+					<div id = "lydgate-left-menu">
+
+					<div id="lydgate-button">
+					<a href="#" id="lydgate-left-transcription">Transcription</a>
+					</div>
+					<div id="lydgate-button">
+					<a href="#" id="lydgate-left-facsimile">
+					Facsimile</a>
+					</div>
+					<div id="lydgate-button">
+					<a href="#"  id="lydgate-left-introduction">
+					Introduction</a>
+					</div>
+
+					</div>
+					<div id = "lydgate-right-menu">
+
+
+					  <div id="lydgate-button">
+					  <a href="#" id="lydgate-right-transcription">
+					  Transcription</a>
+					  </div>
+					  <div id="lydgate-button">
+					  <a href="#" id="lydgate-right-facsimile">
+					  Facsimile</a>
+					  </div>
+					  <div id="lydgate-button">
+					  <a href="#" id="lydgate-right-introduction">
+					  Introduction</a>
+					  </div>
+
+					</div>
+
+					<div id = "lydgate-left-main">
+
+
+			<div id="left-transcription">
+
+
+			<?php
+			require 'transcription.php'
+			?>
+			</div>
+			<div id="left-facsimile">
+			<?php
+			require 'facsimile.php'
+			?>
+			</div>
+			<div id="left-introduction">
+			<?php
+			require 'introduction.php'
+			?>
+			</div>
+
+
+			TEST
+					</div>
+					<div id = "lydgate-right-main">
+
+
+						<div id="right-transcription">
+						<?php
+						require 'transcription.php'
+						?>
+						</div>
+						<div id="right-facsimile">
+						<?php
+						require 'facsimile.php'
+						?>
+						</div>
+						<div id="right-introduction">
+						<?php
+						require 'introduction.php'
+						?>
+						</div>
+
+					</div>
+
+
+					</div>
+
+
+
+
+
+
+
+
+	<?php
+	/**
+	 * flash_after_body_content hook
+	 */
+	do_action( 'flash_after_body_content' ); ?>
 
 <?php
-$filename =  basename($_SERVER['PHP_SELF'])
- ?>
 
-																<div id = "lydgate-left-menu">
-
-																<div id="lydgate-button">
-																<a href="<?php
-																echo $filename . "?contents-left=transcription" ;
-																?>">Transcription</a>
-																</div>
-																<div id="lydgate-button">
-															<a href="<?php
-															echo $filename . "?contents-left=facsimile" ;
-															?>">Facsimile</a>
-																</div>
-																<div id="lydgate-button">
-																	<a href="<?php
-																	echo $filename . "?contents-left=intro" ;
-																	?>">Introduction</a>
-																</div>
-
-																</div>
-																<div id = "lydgate-right-menu">
-
-
-																	<div id="lydgate-button">
-																	<a href="<?php
-																	echo $filename . "?contents-right=transcription&contents-left=" . $contentL ;
-																	?>">Transcription</a>
-																	</div>
-																	<div id="lydgate-button">
-																<a href="<?php
-																echo $filename . "?contents-right=facsimile&contents-left=" . $contentL ;
-																?>">Facsimile</a>
-																	</div>
-																	<div id="lydgate-button">
-																		<a href="<?php
-																		echo $filename . "?contents-right=intro&contents-left=" . $contentL ;
-																		?>">Introduction</a>
-																	</div>
-
-
-																</div>
-
-																<div id = "lydgate-left-main">
-
-																	<?php
-
-																	$contentsL = $_GET["contents-left"] ;
-
-																	if ( $contentsL == 'facsimile' ){
-																		$stylesheet = 'facsimile.xsl' ;
-																	}
-																	elseif ( $contentsL == 'intro' ){
-																		$stylesheet = 'intro.xsl' ;
-																	}
-																	else {
-																		$stylesheet = 'transcription.xsl' ;
-																	}
-
-																//	echo $stylesheet ;
-
-																	// Load the XML source
-																	$xml = new DOMDocument;
-																	$xml->load('lydgate.xml');
-
-																	$xsl = new DOMDocument;
-																	$xsl->load( $stylesheet );
-
-																	// Configure the transformer
-
-																	$proc = new XSLTProcessor;
-																	$proc->importStyleSheet($xsl); // attach the xsl rules
-
-																	echo $proc->transformToXML($xml);
-
-																	?>
-
-																</div>
-																<div id = "lydgate-right-main">
-
-																	<?php
-																	$contentsR = $_GET["contents-right"] ;
-
-																	if ( $contentsR == 'transcription' ){
-																		$stylesheet = 'transcription.xsl' ;
-																	}
-																	elseif ( $contentsR == 'intro' ){
-																		$stylesheet = 'intro.xsl' ;
-																	}
-																	else {
-																		$stylesheet = 'facsimile.xsl' ;
-																	}
-
-																//	echo $stylesheet ;
-
-																	// Load the XML source
-																	$xml = new DOMDocument;
-																	$xml->load('lydgate.xml');
-
-																	$xsl = new DOMDocument;
-																	$xsl->load( $stylesheet );
-
-																	// Configure the transformer
-																	$proc = new XSLTProcessor;
-																	$proc->importStyleSheet($xsl); // attach the xsl rules
-
-																	echo $proc->transformToXML($xml);
-
-																	?>
-
-
-
-																</div>
-
-																</div>
-
-
-
-
-
-
-
-		<?php
-
-/*
-		if ( 'sidebar-right' == $layout_class ) :
-			get_sidebar();
-		endif; */
-		?>
-	</div>
-<?php
 get_footer();
+
+?>
