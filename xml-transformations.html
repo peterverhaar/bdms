@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="style2018.css">
+<title>WeeklyProgramme2018</title>
+</head>
+
+<body>
+<h1 class='header'>Digital Media Technology</h1>
+<h2 class='header'>2018-2019</h2>
+
+
+(TEI) XML is a metadata format that captures the structure of a document. In itself, XML is not an attractive presentation format, but XML files can be transformed into other types of files, that serve presentation purposes, such as HTML, PDF, or ePub. You can also transform an XML document into a structurally different XML.
+
+For the transformation, you need a source-XML file, a stylesheet (XSLT), and an application that can process the transformation.
+
+Two stylesheets which can transform TEI files can be found in <a href="http://bookandbyte.org/DMT/Exercises/XSLT-Exercises.zip">this zipped folder</a>. These stylesheets are called <strong>tei-html.xsl</strong> and <strong>tei-pdf.xsl</strong>; the former transforms TEI into HTML, and the latter transforms TEI to PDF.
+<h4></h4>
+<h4>Transformations in Oxygen</h4>
+To transform an XML file in the Oxygen application, you need to create a 'transformation scenario'.
+<ul>
+	<li>
+<p align="left">Click on the <i>Configure Transformation Scenario-</i>button. <img src="http://bookandbyte.org/DMT/XSLT/configure.gif" align="right" hspace="5" vspace="5" />It has an icon with a spanner and a small red triangle (see image on the right).</p>
+</li>
+	<li>In the window that pops up, click 'New'. Another window appears. In the top of the new window, you can see a text field in which you can enter a name for the scenario that you are about to create. Type, for instance, "Transformation1". This is the name that will appear in the 'Configure Transformation Scenario'-window. This window contains three tabs :
+<ol>
+	<li>Click on the tab that is marked 'XSLT'. This screen contains a the text field which is labelled 'XSLT URL', and here you can select the stylesheet that you want to use. Click on the "open"-button to navigate to your stylesheet. Note that you also have the option in this screen to select an XSLT-processor. The default processor is Saxon. For basic transformations, choosing a different processor will have very little to no effect on the outcome. It is only when you include a number of more advanced features of XSLT that you might begin to notice a few differences.</li>
+	<li>The middle tab, 'FO Processor' is only used for scripts that contain XSL:FO; this is the case for the transformation to PDF (but not for HTML). In the transformation to PDF, check the box for 'Perform FO processing', and make sure the option 'XSLT result as output' is selected.</li>
+	<li>The third (rightmost) tab, titled 'Output' allows you to configure the output file. Choose whether you want to save the file automatically, or have Oxygen prompt for it; in any case, type in the name that you would like to give to your HTML-file (e.g. <i>output.html</i>). Make sure you specify the '.html' file extension! If you do not specifiy a path, Oxygen will automatically save the output in the same directory as the stylesheet and the XML-file. If you select the 'Open in browser'-option, Oxygen will load the result of the transformation in your Internet browser.</li>
+</ol>
+</li>
+	<li>Click 'OK' in the current window to switch back to the the underlying window (the <i>Configure Transformation Scenario</i>-window). Having checked that the scenario that you have just created appears in the list and that it is selected, click 'OK' to close this window.</li>
+</ul>
+<img src="http://bookandbyte.org/DMT/XSLT/transform.gif" align="right" hspace="5" vspace="5" />If a scenario is available and if it has been configured correctly, you can execture the transformation by clicking on the <i>Apply Transformation</i>-button which is marked by a red arrow (see illustration). If the transformation is successful, a new HTML-file will have been created in the directory that you had specified. If the transformation is not successful, Oxygen will show with a red notification and an error report in the bottom of your window.
+
+ 
+<h4>Transforming XML in your browser</h4>
+An XSLT-transformation can also be performed by a browser that supports XSL. This is the case for, for example, Firefox, and for Internet Explorer version 5 and higher. The Microsoft XSLT implementation is called MSXSL.
+
+To transform the file, add a link in the XML file to the XSLT-file, immediately after the XML-declaration :
+<pre><span style="font-family: 'Courier New', Courier, mono;"><?xml-stylesheet type="text/xsl" href="transformation.xsl"?></span></pre>
+If you open the xml-file in a browser that supports XSL, you will see not the full XML file, but a representation of this file based on the specifications in the stylesheet <em>transformation.xsl</em>.
+
+
+</body>
+</html>
