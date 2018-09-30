@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+  <title>Guidelines for the Transcription and Encoding of Primary Sources </title>
+  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="style2018.css">
+ </head>
+ <body class="grey">
+		<div class="body">
+		   <br/>
+			<br/>
+			<h2 >Booktrade Correspondence Project: <br/>
+				Guidelines for the Transcription and Encoding of Primary Sources
+			</h2>
+			<hr/>
+			<h2>&#160; </h2>
+			<p><br/>
+				<b>Procedure:</b></p>
+			<table width="75%" cellspacing="10">
+				<tr>
+					<td width="7%" valign="top" >1.</td>
+					<td width="93%">Transcribe the text of the source as meticulously as possible
+        (see <a href="#transcription">General remarks about the transcription</a> below).</td>
+				</tr>
+				<tr>
+					<td width="7%" valign="top" height="4">2.</td>
+					<td width="93%">Proofread the completed transcription against
+        the source very carefully.</td>
+				</tr>
+				<tr>
+					<td width="7%" valign="top" >3.</td>
+					<td width="93%">Provide editorial annotations (see <a href="#notes">Editorial annotations</a> below).</td>
+				</tr>
+				<tr>
+					<td width="7%" valign="top" >4.</td>
+					<td width="93%">Create a summary of the text.</td>
+				</tr>
+				<tr>
+					<td width="7%" valign="top" >5.</td>
+					<td width="93%"> If the source is not in English, create an English
+        translation.</td>
+				</tr>
+				<tr>
+					<td width="7%" valign="top" >6.</td>
+					<td width="93%">Create a file using the file naming conventions below.</td>
+				</tr>
+				<tr>
+					<td width="7%" valign="top">7.</td>
+					<td width="93%">Encode the transcription, using the instructions below for
+        the <a href="#TEI-header">TEI Header</a> and the <a href="#TEI-text">text</a> of the letters. Note that these contain merely
+        the briefest of abstracts, and only those most germane to the project,
+        of the comprehensive instructions detailed in the fifth edition of the
+        guidelines of the Text Encoding Initiative (&quot;P5&quot;). The following
+        two chapters of the TEI Guidelines are the most directly relevant to the
+        project:
+        11. <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html">Representation of Primary Sources</a> (especially from 11.3 onwards), and
+        13. <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html">Names, Dates, People, and Places</a>.</td>
+				</tr>
+			</table>
+			<a name="transcription" id="transcription">&#160;</a>
+			<h2>
+    A. General remarks about the encoded transcription</h2>
+			<ul>
+			<li>Please be as precise as you can: the result of your work will be used for research purposes.</li>
+			<li>Words are joined or hyphenated as they are found in the source. Punctuation
+				is left as found, except that sentences always end with a full stop, even if you would have to insert it in a &lt;supplied&gt; element, or if it looks a little like a dash or comma. </li>
+			<li>
+					If you need to use non-keyboard characters, please use the <a href="http://www.bookandbyte.org/DMT/unicode.html" target="_new">Unicode character charts</a>. For example, &quot;&#xE0;&quot; (&quot;Latin small letter a with grave&quot;) is rendered as &quot;&amp;#xE0;&quot;, &quot;&#xE9;&quot; (&quot;Latin small letter e with acute&quot;) as &quot;&amp;#xE9;&quot;, and &#xDF; (&quot;Latin small letter sharp s&quot;, or &quot;Ringel-S&quot; or &quot;sz&quot;) as &quot;&amp;#xDF;&quot;. </li>
+<li> Remove unused elements in the &lt;body&gt; of the TEI file, but not from the &lt;teiHeader&gt;.
+			</ul>
+			<h2>
+			B. The encoding</h2>
+			<p>NB: by convention, in what follows attribute names are preceded by the @-sign.</p>
+			<a name="TEI-header" id="TEI-header"></a>
+			<h3>
+			The TEI Header</h3>
+			<h4>The file description (<a href="http://www.tei-c.org/P5/Guidelines/ref-fileDesc.html">fileDesc</a>)</h4>
+			<p>In the <code><a target="_new" href="http://www.tei-c.org/P5/Guidelines/ref-title.html">title</a></code> element within <code><a href="http://www.tei-c.org/P5/Guidelines/ref-fileDesc.html">fileDesc</a></code>, provide the title of the document in the following form:</p>
+			<blockquote>
+				<code>[letter, draft letter, form letter (=Dutch 'circulaire'), postcard, picture postcard,
+    prospectus, note, or telegram] from [Sender] to [Recipient], [date in English in the form dd  Month yyyy]: a machine readable transcription
+</code></blockquote>
+			<p>Personal names of senders and recipients are written using the following form: Firstnames, or initial(s) with full stop(s)
+				not separated from each other by a space, followed by a space, followed by
+				the surname.</p>
+			<p>In
+    <code><a target="_new" href="http://www.tei-c.org/P5/Guidelines/ref-idno.html">idno</a></code>, under <code><a target="_new" href="http://www.tei-c.org/P5/Guidelines/ref-publicationStmt.html">publicationStmt</a></code>, record the ID of the file. Follow the instructions that are given in <a href="#appxA">Appendix A</a>.</p>
+			<h4>The source description (<a href="http://www.tei-c.org/P5/Guidelines/ref-sourceDesc.html">sourceDesc</a>)</h4>
+			<p>The <code>title</code> element within <code><a href="http://www.tei-c.org/P5/Guidelines/ref-sourceDesc.html">sourceDesc</a></code> contains a bibliographic description of the document that has been transcribed, in the following form:</p>
+			<blockquote>
+				<code>[letter, draft letter, form letter (=Dutch 'circulaire'), postcard, picture postcard,
+    prospectus, note, or telegram] from [Sender] to [Recipient], [date in English in the form dd Month yyyy]
+</code></blockquote>
+				<p>This strongly resembles the title element within <code>fileDesc</code>. However, it omits the phrase 'A machine-readable transcription', and it encodes the names of the correspondents using the <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-orgName.html">orgName</a></code> or the <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-persName.html">persName</a></code> element, and the date using a <code><a  target="_new" href="http://www.tei-c.org/P5/Guidelines/ref-date.html">date</a></code> element with @when attribute with the value "yyyy-mm-dd". Be careful to avoid leading or trailing spaces inside <code>persName</code> and <code>orgName</code> elements: they may pe part of the sentence, but not of the name.</p>
+				<blockquote><code>&lt;title&gt;Letter from &lt;persName&gt;K. Fuhri&lt;/persName&gt; to &lt;persName&gt;A.C. Kruseman&lt;/persName&gt;, &lt;date when=&quot;1850-11-18&quot;&gt;18 November 1850&lt;/date&gt;.&lt;/title&gt;</code></blockquote>
+			<p>Under <code>idno</code>, fill in the shelfmark of the source. Fill in the library ID (UBA for University Library Amsterdam; UBL for University
+    Library Leiden; KB for Koninklijke Bibliotheek, etc.) followed by the shelf
+    mark. Examples:</p>
+			<blockquote>
+				<code>
+    &lt;idno type=&quot;callNo&quot;&gt;UBA Fu 8-25&lt;/idno&gt;<br/>
+					&lt;idno type=&quot;callNo&quot;&gt;UBL Ltk 1795 8, nr. 1&lt;/idno&gt;<br/>
+					&lt;idno type=&quot;callNo&quot;&gt;UBL BOH C17, fol. 231&lt;/idno&gt;
+    </code></blockquote>
+
+			<a name="TEI-text" id="TEI-text"></a>
+			<h3>The text</h3>
+			<h4>Front</h4>
+					<p>Under <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-front.html">front</a></code>, include a short paragraph summing up the contents of the letter in a <code>div type="summary"</code>. The summary must be in English.
+			</p>
+
+					<h4>Body</h4>
+					<h5>The opener</h5>
+			<p>The opener contains all information about the recipient (name, address), and the information about when the letter was sent. Note that the recipient's name goes within a &lt;persName&gt; or &lt;orgName&gt; element within an &lt;addrLine&gt; element. The Opener does <i>not</i> include the sender's name and address details (though the sender's <code>placeName</code> is part of the <code>dateline)</code>. These go in the closer. The following example is of a letter sent by an Amsterdam bookseller to Sijthoff publishers in Leiden:</p>
+			<blockquote>
+				<p><code>
+			    &lt;dateline&gt;<br/>
+				  &lt;placeName&gt;Amsterdam&lt;/placeName&gt;<br/>
+				  &lt;date when=&quot;1883-01-19&quot;&gt;19 Januari 1883&lt;/date&gt; <br/>
+				  &lt;/dateline&gt;<br/>
+				  &lt;address&gt;<br/>
+				  &lt;addrLine&gt;&lt;persName&gt;J. La Bree&lt;/persName&gt;&lt;/addrLine&gt;<br/>
+				  &lt;addrLine&gt;c/o &lt;orgName key=&quot;ASYT&quot;&gt;Sijthoff&lt;/orgName&gt;&lt;/addrLine&gt;<br/>
+				  &lt;addrLine&gt;Doezastraat 1, 3 &amp; 5&lt;/addrLine&gt;<br/>
+				  &lt;addrLine&gt;Leiden&lt;/addrLine&gt;<br/>
+			    &lt;/address&gt;<br />
+			    &lt;salute&gt;Mijne Heeren&lt;/salute&gt;
+				</code>        </p>
+		  </blockquote>
+		  <h5>The closer</h5>
+			<p>The closer contains information about the sender (name and address). The
+    name of the sender must be encoded in a <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-signed.html">signed</a></code> element. Use <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-address.html">address</a></code>
+    to encode the address of the sender if present in the source.</p>
+			<p>If a closing salute consists of two parts, use two salute elements. Examples:</p>
+
+			<blockquote>
+				<code>&lt;salute&gt;Na vriendelijke groeten&lt;/salute&gt;<br/>&lt;salute&gt;Uw vriend&lt;/salute&gt;<br/></code>
+			</blockquote>
+			<p>
+				Abbreviated honorifics such as &quot;ZEd&quot; &quot;Zed.&quot;, &quot;Ued&quot;, &quot;Yrs&quot;
+    are expanded using the <code>abbr</code> and <code>expand</code> elements (see <a href="#choice">below</a>).
+</p>
+
+			<p>If the source is a preprinted letterhead, the text printed on the letterhead is indicated by means of {} surrounding the text
+    in the appropriate elements. Example:</p>
+			<blockquote>
+				<code>
+
+    &lt;dateline&gt;<br/>
+					&lt;placeName&gt;{'s Gravenhage}&lt;/placeName&gt;<br/>
+					&lt;date when=&quot;1848-01-16&quot;&gt;16 Januarij {184}8&lt;/date&gt;<br/>
+					&lt;/dateline&gt;</code></blockquote>
+			<p>The name and address of the sender may or may not be present in the form
+    of a preprinted letterhead. In the following example the letterhead only contains
+    the address, but not the name:</p>
+			<blockquote>
+				<code>
+    &lt;signed&gt;R. de Tracy Gould&lt;/signed&gt; <br/>
+					&lt;address&gt;&lt;addrLine&gt;{4, Garden Court,}&lt;/addrLine&gt; <br/>
+					&lt;addrLine&gt;{Temple,}&lt;/addrLine&gt; <br/>
+					&lt;addrLine&gt;{London. E.C.}&lt;/addrLine&gt; <br/>
+					&lt;/address&gt; </code></blockquote>
+			<p>If a letter contains a postscriptum, it is encoded using a <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-seg.html">seg</a></code> element. This element takes a @type attribute, with the value &quot;postscript&quot;</p>
+
+			<blockquote>
+				<code>
+    &lt;closer&gt; <br/>
+					&lt;salute&gt;your obedient servants&lt;/salute&gt; <br/>
+					&lt;signed&gt;de Erven F. Bohn&lt;/signed&gt;<br/>
+					&lt;seg type=&quot;postscript&quot;&gt;A sending by post of the sheets immediately
+    after been printed would be much better to &lt;lb/&gt; us. &lt;/seg&gt;<br/>
+					&lt;/closer&gt;
+
+				</code></blockquote>
+
+				<h4>Page breaks and line breaks</h4>
+			<p>Line and page breaks in the source document are indicated using the (empty)
+			&lt;lb/&gt; and &lt;pb/&gt; elements. They are preceded by a space, except where a space would not normally occur if the &lt;lb/&gt; was not present, e.g. in case of a hyphenated word. Note that no &lt;lb/&gt; is used immediately beforethe closing &lt;/p&gt;, &lt;/addrLine&gt;, &lt;/salute&gt; tags, etc., as these already indicate that a line ends there.</p>
+			<p></p>
+
+            	<h4>Book titles and personal names</h4>
+			<p>The titles of all books, journals or articles must be encoded using the &lt;<a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-title.html"  target="_new">title</a>&gt; element. </p>
+			<p>
+            All personal names must be encoded using the &lt;<a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-persName.html"  target="_new">persName</a>&gt; element. Names of organisations must be encoded using the &lt;<a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-orgName.html" target="_new">orgName</a>&gt; element.
+            </p>
+            <p></p>
+
+
+
+				<h4>Omitted and supplied text</h4>
+			<p>When it is impossible to transcribe a certain section of the text as a result of illegible handwriting or damaged text
+    use the &lt;gap&gt; element. This element must remain empty. The @reason attribute
+    specifies the reason for the omission., e.g. &quot;illegible&quot;, or &quot;cancelled&quot;.
+    The @extent
+    attribute gives an indication of the number of words or characters that are omitted.</p>
+			<blockquote>
+				<code>
+Dear sirs, in reaction to your quote of &lt;gap reason=&quot;ink stain&quot;
+    extent=&quot;1 word&quot;/&gt; we are forced to ...</code></blockquote>
+			<p>
+    If new text has been supplied for any  reason,
+    use the <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-supplied.html">supplied</a></code> element.
+
+    For example, if the text that is transcribed is a copy of a letter that would have been
+    	sent out on a sheet of preprinted letterhead, the preprinted information contained
+    	in the letterhead is absent from the copy. In such a case some of that information
+<code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-supplied.html">supplied</a></code> element, as follows:</p>
+				<blockquote>
+					<code>
+
+						&lt;dateline&gt;<br/>
+						&lt;placeName&gt;&lt;supplied reason=&quot;on preprinted letterhead missing from copybook&quot;&gt;Haarlem&lt;/supplied&gt;&lt;/placeName&gt;<br/>
+						&lt;date when=&quot;1848-01-16&quot;&gt;16 Januarij &lt;supplied reason=&quot;on preprinted letterhead missing from copybook&quot;&gt;184&lt;/supplied&gt;8&lt;/date&gt;<br/>
+						&lt;/dateline&gt;</code></blockquote>
+
+			<h4>Unclear text</h4>
+			<p>Use <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-unclear.html">unclear</a></code>
+    to indicate a section which is difficult to read in the source. The @reason attribute indicates
+    why the source is difficult to transcribe. For instance, the text may be
+    damaged, the ink may be faded, or the author may have used a very unclear handwriting. Example:</p>
+			<blockquote>
+				<code>
+    Tell &lt;unclear reason=&quot;bad handwriting&quot; cert=&quot;medium&quot;&gt;Harmer&lt;/unclear&gt;
+    that he can come tomorrow.
+    </code></blockquote>
+			<p>Always use a @reason attribute for <code>unclear</code>, <code>gap</code> and <code>supplied</code>. In addition, <code>unclear</code> and <code>supplied</code> take a @cert attribute to indicate the encoder's degree of certainty that the text given is correct (possible degrees of certainty in attribute value: "high", "medium", "low", "unknown"). The <code>gap</code> takes an @extent attribute (value: any string of letters and numbers).<br/>
+			</p>
+			<h4>Graphically distinct text</h4>
+			<p>Underscores and italics used for stress or emphasis for linguistic or rhetorical
+    effect are rendered through the <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-emph.html">emph</a></code> element, in combination with
+    the @rend attribute. For example:</p>
+			<blockquote>
+				<code>... of which he understands &lt;emph rend=&quot;underlined&quot;&gt;nothing&lt;/emph&gt;</code>
+			</blockquote>
+			<p>The following values can be used with the @rend attribute: &quot;bold&quot;, &quot;italic&quot;, &quot;bold-italic&quot;, &quot;underlined&quot;, &quot;double-underlined&quot;.</p>
+			<p>If in the MS a book title is enclosed in quotation marks or underlined, this is <i>not</i> indicated in the encoding. That it is a book title is indicated solely by the &lt;title&gt; tag, which replaces any typographic indication in the source.</p>
+			<a name="choice" id="choice"></a>
+			<h4>Correction, abbreviation, regularisation</h4>
+
+			<p>Book titles are often shortened or otherwise referred to rather impressionistically. In such cases the written title is given in an  <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-oeig.html">orig</a></code> element and the full title is given in a <code><a target="_new" href="http://www.tei-c.org/P5/Guidelines/ref-reg.html">reg</a></code> element. These two elements are together enclosed in turn within a <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-choice.html">choice</a></code> element. Example:</p>
+			<blockquote>
+				<code>
+					&lt;choice&gt;<br/>&lt;orig&gt;Haafner's reize&lt;/orig&gt;<br/>&lt;reg&gt;J. Haafner's reize te voet door Ceylon&lt;/reg&gt;<br/>&lt;/choice&gt;
+				</code>
+			</blockquote>
+			<p>Abbreviations are expanded as follows:</p>
+			<blockquote>
+				<code>Your &lt;choice&gt;&lt;abbr&gt;obdt.&lt;/abbr&gt;&lt;expan&gt;obedient&lt;/expan&gt;&lt;choice&gt; servant<br/><br/>
+					Uw &lt;choice&gt;&lt;abbr&gt;dw.&lt;/abbr&gt;&lt;expan&gt;dienstwillige&lt;/expan&gt;&lt;/choice&gt; dienaar</code>
+			</blockquote>
+			<p>Misspellings (which occur frequently in letters not written by native speakers,
+    as in the letters by Dutch publishers with their foreign correspondents) are
+    corrected using the <code>choice</code>, <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-sic.html">sic</a></code> and <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-corr.html">corr</a></code> elements:</p>
+			<blockquote>
+				<code>It would be very &lt;choice&gt;&lt;sic&gt;agreable&lt;/sic&gt;&lt;corr&gt;agreeable&lt;/corr&gt;&lt;/choice&gt; to us ...</code>
+			</blockquote>
+			<p>Unusual spellings that were current at the time are maintained without adding &lt;sic&gt;. </p>
+			<h4>Figures</h4>
+			<p>Figures (e.g. money) are always given with a full stop as a decimal marker. Sums of money may be preceded by a currency marker. E.g. in Dutch guilders the guilder sign (&#131;, represented as the entity &amp;#x192;); in English pounds the pound sign (&#163;, represented as the entity &amp;#xA3;).</p>
+			<h4>Foreign words</h4>
+			<p>Use &lt;foreign&gt; to identify a word or phrase as belonging to some language other than that of the surrounding text. Identify the language used by means of the codes of <a href="http://www.loc.gov/standards/iso639-2/php/English_list.php">ISO 639-2</a> (note that 3-letter codes are in lower case; 2-letter codes are in capitals). E.g.:</p>
+			<blockquote>
+				<code>Wij hebben inmiddels de &lt;foreign xml:lang=&quot;eng&quot; &gt;proof sheets&lt;/foreign&gt;
+    uit Londen ontvangen </code>
+			</blockquote>
+			<h4>Dates</h4>
+			<p>Dates are standardised with the @when attribute, using the ISO 8601 standard, which represents the date in the form YYYY-MM-DD. In the event of uncertainty, digits can be left off from the end. For example, if a letter is known to date from 1854, while the day and month are unknown, the date would be given as &quot;1854&quot;.</p>
+			<blockquote>
+				<code>
+					&lt;date when=&quot;1848-01-16&quot;&gt;16 Januarij {184}8&lt;/date&gt;<br/>
+					&lt;date when=&quot;1864-08-06&quot;&gt;6 Aug. '64&lt;/date&gt;<br />
+				</code>
+			</blockquote>
+			<h4>Names</h4>
+			<p>Names encountered in the text should always be marked up according to their type. The available elements are
+
+  <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-persName.html">persName</a></code>
+  (for persons), <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-placeName.html">placeName</a></code> (for geographical names) and <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-orgName.html">orgName</a></code> (for organisations)</p>
+			<blockquote>
+				<code>
+    &lt;placeName&gt;Paris&lt;/placeName&gt;<br/>
+					&lt;persName&gt;K. Fuhri&lt;/persName&gt;<br/>
+					&lt;orgName&gt;Koch's&lt;/orgName&gt;
+				</code>
+			</blockquote>
+
+			<a name="notes" id="notes">&#160;</a>
+			<h4>Editorial annotations</h4>
+			<p>Editorial annotations can be used to provide more contextual information on the text that is transcribed. When deciding what information to annotate, think of what is typically annotated in a printed edition of correspondence. For example,   identify bibliographic details of publications mentioned (author, full title, place of publication, publisher, and year), and identify people and organisations.</p>
+			<p>For your research, use the Leiden library OPAC (and other OPACs depending on the nature of the bibliographic item), Google, Wikipedia, biographical dictionaries and other reference works intelligently. For example: in BOH C107 fol. 1. the author (J.G.C. Schlenker) asks De Erven F. Bohn:</p>
+			<blockquote> would you be so kind as to send the us the 125
+				copies of the Tijdschrift, the ones for the exchange journals, to Professor
+				Van Haren Noman [...]</blockquote>
+			<p>The search for 'tijdschrift bohn' in the Leiden OPAC yields 79 results, but Wikipedia has an article on Van Haren Noman, which mentions Tijdschrift two times: 'Tijdschrift der Nederlandse dierkundige vereniging', and 'Ned. Tijds. v. Geneesk.'. The query 'tijdschrift bohn dierkundige' yields no result in the Leiden OPAC, but 'tijdschrift bohn geneeskunde' does. A Google search for 'tijdschrift geneeskunde bohn "Haren Noman"' yields a number of interesting results, among which <a href="http://www.ntvg.nl/publicatie/van-tekening-en-foto-tot-gedrukte-illus-279251/volledig">this interesting article (in Dutch)</a>. So the Tijdschrift in question must be the <i>Nederlands tijdschrift voor geneeskunde</i>.</p>
+			<p>Include the <code><a target="_new"  href="http://www.tei-c.org/P5/Guidelines/ref-note.html">note</a></code> element directly after the text the note applies to. The text of the annotation must be give in a <code>p</code> element. A note may contain various paragraphs. </p>
+			<blockquote>
+				<code>
+
+    &lt;p&gt; ... the calendering &lt;note&gt;&lt;p&gt;Calendering, or satinizing,
+    is a process of treating paper.&lt;/p&gt;&lt;/note&gt;<br/>
+					is carried out by the foreman ...&lt;/p&gt;
+
+    </code></blockquote>
+			<p>In the case of letters written in Dutch, French or German, an English translation
+    is given in the first note. Such a note is given a @type attribute with the value "translation".
+ Include such a note at the beginning
+    of the text, directly after the first &lt;p&gt; opening element. <br/>
+				 Example:</p>
+			<blockquote>
+				<code>
+&lt;p&gt;&lt;note type=&quot;translation&quot;&gt;&lt;p&gt;In response to
+    your postcard&#133;&lt;/p&gt;&lt;/note&gt;En r&#232;ponse &#224; votre
+    carte postale&#133;&lt;/p&gt;<br/>
+				</code></blockquote>
+			<br/>
+			<a name="appxA" id="appxA"></a>
+			<h2>Appendix A: File names and IDs</h2>
+			<p>
+    Each letter that is transcribed for the Booktrade Corespondence Project must be given
+    an ID. This ID is created as follows. Choose the initials and/or first letters
+    of the sender's company name or surname as a prefix,
+    followed by the letter's date in the form YYYYMMDD.
+A list of existing IDs for can be found through the links below (note that the lists are not sorted alphabetically):</p>
+
+			<ul>
+			  <li><a href="ids.html" target="_new">IDs </a></li>
+			</ul>
+
+
+			<p>The ID must also be used in the file name. Examples: </p>
+			<table class="thinBorder">
+		  <tr>
+					<td class="thinBorder"> Sender </td>
+					<td class="thinBorder">  Date  </td>
+					<td class="thinBorder"> ID</td>
+					<td class="thinBorder"> File name </td>
+				</tr>
+				<tr>
+					<td class="thinBorder"> William Blackwood  </td>
+					<td class="thinBorder">  7 Sept. 1892  </td>
+					<td class="thinBorder">  WBLA18920907 </td>
+					<td class="thinBorder"> WBLA18920907.xml</td>
+				</tr>
+				<tr>
+					<td class="thinBorder"> Erven F. Bohn  </td>
+					<td class="thinBorder"> 25 maart '85  </td>
+					<td class="thinBorder"> EFBO18850325 </td>
+					<td class="thinBorder">  EFBO18850325.xml</td>
+				</tr>
+				<tr>
+					<td class="thinBorder">  K. Fuhri </td>
+					<td class="thinBorder">  28 Januari [186]4  </td>
+					<td class="thinBorder"> KFUH18640128 </td>
+					<td class="thinBorder">  KFUH18640128.xml</td>
+				</tr>
+				<tr>
+					<td class="thinBorder"> A.C. Kruseman  </td>
+					<td class="thinBorder"> 31 mei '58  </td>
+					<td class="thinBorder"> ACKR18580531  </td>
+					<td class="thinBorder"> ACKR18580531.xml</td>
+				</tr>
+				<tr>
+					<td class="thinBorder">  Lord Lytton  </td>
+					<td class="thinBorder"> 6th Nov. [1876] </td>
+					<td class="thinBorder">  LYTT18761106  </td>
+					<td class="thinBorder"> LYTT18761106.xml</td>
+				</tr>
+				<tr>
+					<td class="thinBorder"> Richard Bentley and Son  </td>
+					<td class="thinBorder"> 23rd October 1888 </td>
+					<td class="thinBorder">  RBEN18881023  </td>
+					<td class="thinBorder"> RBEN18881023.xml</td>
+				</tr>
+				<tr>
+					<td class="thinBorder">  Ouida  </td>
+					<td class="thinBorder"> July 8th, '84  </td>
+					<td class="thinBorder"> OUID18840708  </td>
+					<td class="thinBorder"> OUID18840708.xml</td>
+				</tr>
+			</table>
+			<p>When a correspondent has sent more than one letter on he same day, use
+    letters to distinguish the files. Examples: EFBO18760613a.xml and EFBO18760613b.xml were written by De Erven F. Bohn on the same day.</p>
+			<p>&#160;</p>
+
+
+  	<p align="center" style="font-size:12px;">
+  		Written by: Adriaan van der Weel, Andrew Stevens and Peter Verhaar.<br/>
+  		Last updated: 01 October 2014 (FP).
+  	</p>
+
+		</div>
+	</body>
+</html>
