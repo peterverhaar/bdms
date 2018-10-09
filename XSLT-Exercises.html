@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="../style2018.css">
+<title>XSLT Exercises</title>
+</head>
+
+<body>
+
+<h2>HTML Exercises</h2>
+
+<p>To do these exercises, you need to download a number of sample XML files. They have been placed in <a href="https://digitalscholarship.nl/DMT/XSLT/XSLT-exercises.zip">this folder</a> (from which you also downloaded the XSLTs used for the <a href="https://digitalscholarship.nl/DMT/XSLT/xml-transformations.html">Transformation of XML</a>).</p>
+<!--
+<p>N.B. Model answers to the exercises below can be found <a href="http://bookandbyte.org/DMT/index.php/xslt-exercises-model-answers/">here</a>.</p> -->
+<p><strong>Exercise 1</strong></p>
+<p>Follow the steps specified in the list below to create a stylesheet that can transform letter.xml into an HTML document that looks as follows:</p>
+
+<div width="75%" style="background-color: #eff2f7; margin-left: 50px; margin-right: 50px; padding: 50px; ">
+
+
+  <h2>Letter from De Erven F. Bohn to W. Blackwood and sons</h2>   
+   <p> Dear Sirs! </p>    
+  <p>We beg to apply to you the kind request for sending us one week before the publication  one copy of Bulwer's novel: Kenelm Chillingly, His adventures and opinions, which book  you have in the press, for what we are inclined to pay 30£. When it were possible to  send us already now the first volume by the post; it would be yet more agreeable. Mr  H.A. Kramers at Rotterdam readily will be our pledge. </p>   
+   <p>yours truly</p>     
+ <p align="center">De Erven F. Bohn</p>   
+
+
+
+
+
+</div>
+<ul>
+  <li>From the folder that you have downloaded, open the file "letter.xml" in Oxygen. Choose File &gt; New in Oxygen and select 'XSL stylesheet'. Save the new file as "letter.xsl" in the same directory as the XML file.</li>
+  <li>Build the style sheet. The HTML codes that you need to use in your XSLT stylesheet for this exercise are provided below. Add XSLT-code on the positions of the comments.</li>
+</ul>
+<p>Note that XSLT transforms the structure of an XML source file into a result file of many types. You will have to insert the structural code of the result file yourself: if you want to create an HTML file from an XML file with XSLT, this implies that you will have to add the fundamental elements of the HTML-result file.</p>
+<div width="75%" style="background-color: #eff2f7; margin-left: 20px; margin-right: 20px; padding: 30px; ">
+<pre>&lt;html&gt; 
+  &lt;head&gt;&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt; &nbsp;  
+ &nbsp; &nbsp;&nbsp;      &lt;title&gt;&lt;!-- title from head --&gt;&lt;/title&gt;  
+ &lt;/head&gt;  &lt;body&gt;  
+ &nbsp;&lt;h2&gt;&lt;!-- title from head --&gt;&lt;/h2&gt; &nbsp; 
+  &nbsp;&lt;p&gt; &lt;!-- Opening salute from body/greeting --&gt;&lt;/p&gt; &nbsp;  
+ &nbsp;&lt;p&gt;&lt;!-- Body of the letter from body/p --&gt;&lt;/p&gt; &nbsp; 
+  &nbsp;&lt;p&gt;&lt;!-- Closing salute from body/salute --&gt;&lt;/p&gt; &nbsp; &nbsp; 
+ &lt;p align="center"&gt;&lt;!-- Name of the letter's sender from body/signed--&gt;&lt;/p&gt; &nbsp; 
+&lt;/body&gt;  
+&lt;/html&gt;</pre>
+
+</pre>
+</div>
+
+<p><strong>Exercise 2</strong></p>
+<p>Create a stylesheet that can transform "literatureList.xml" (from the folder you have downloaded) into an HTML document that looks as follows:</p>
+<ul>
+  <li>A Social History of the Media, from Gutenberg to the Internet</li>
+  <li>The printing revolution in early modern Europe</li>
+  <li>The kiss of Lamourette : reflections in cultural history</li>
+  <li>Buchkunde: ein Überblick über die Geschichte des Buches</li>
+  <li>Books in the digital age: the transformation of academic and higher education publishing in Britain and the United States</li>
+  <li>Die literarische Welt des Mittelalters</li>
+  <li>l'Apparition du livre</li>
+  <li>Les métamorphoses du livre: entretiens avec Jean-Marc Chatelain et Christian Jacob</li>
+</ul>
+<p><strong>Exercise 3</strong></p>
+<p>Using the result of exercise 2, create a stylesheet that can display all the book titles in "literatureList.xml" in alphabetical order.</p>
+<p><strong>Exercise 4</strong></p>
+<p>Building on the stylesheet that you have created for exercise 3, create a stylesheet that can transform "literatureList.xml" into an HTML file as below.<br /><br/>
+  Note that it displays the full name of the author (inverted order), the title and the full imprint (in the form Place: Publisher, Year). Sort the list by the last name of the author.</p>
+<ul>
+  <li>Brinker-von der Heyde, Claudia. <em>Die literarische Welt des Mittelalters</em>. Darmstadt: Wissenschaftliche Buchgesellschaft, 2007.</li>
+  <li>Burke, Peter. <em>A Social History of the Media, from Gutenberg to the Internet</em>. London: Polity Press, 2005.</li>
+  <li>Darnton, Robert. <em>The kiss of Lamourette : reflections in cultural history</em>. New York: Norton, 1990.</li>
+  <li>Eisenstein, Elizabeth Lewisohn. <em>The printing revolution in early modern Europe</em>. Cambridge University Press, 1983.</li>
+  <li>Febvre, Lucien. <em>l'Apparition du livre</em>. Paris: É́ditions Albin Michel, 1971.</li>
+  <li>Funke, Fritz. <em>Buchkunde :ein Überblick über die Geschichte des Buches</em>. München: Saur, 1992.</li>
+  <li>Martin, Henri-Jean. <em>Les métamorphoses du livre : entretiens avec Jean-Marc Chatelain et Christian Jacob</em>. Paris: Albin Michel, 2004.</li>
+  <li>Thompson, <em>John B. Books in the digital age: the transformation of academic and higher education publishing in Britain and the United States</em>. Cambridge: Polity, 2005.</li>
+</ul>
+<p> </p>
+<p><strong>Exercise 5</strong></p>
+<p>Write four separate stylesheets (1-4) that can make the bulleted listst with the following selections from "literatureList.xml". You should write separate stylesheets for these four subquestions. Note that it might be wise to re-use (parts of) the stylesheet you have built for Exercise 4.</p>
+<ol>
+  <li>Only the English titles</li>
+  <li>Titles written after the year 2000.</li>
+  <li>The titles that are NOT written in French.</li>
+  <li>The titles published in New York.</li>
+</ol>
+<p> </p>
+<p><strong>Exercise 6</strong></p>
+<p>Create a single XSLT stylesheet  that displays quantitative information about the file "collection.xml":</p>
+<ul>
+  <li>The total number of letters in the collection.</li>
+  <li>The number of letters written before 1900.</li>
+  <li>The number of letters in English.</li>
+</ul>
+<p>Create a list displaying all the letters which are addressed to A.W. Sijthoff. Show only the shelf marks.</p>
+<p> </p>
+<p><strong>Exercise 7</strong></p>
+<p> </p>
+<p>Create an XSLT that can transform the file "collection.xml" into the HTML document below:</p>
+<p> </p>
+
+
+<div width="75%" style="background-color: #eff2f7; margin-left: 50px; margin-right: 50px; padding: 50px; ">
+<h2>Letter Collection of the University of Leiden  </h2>
+<ul><li>
+ Letter from Antheunis-Conscience to Sijthoff, Albertus Willem 
+ </li><li> Letter from Behrend, Fritz to Vreese, Willem Lodewijk de </li><li> Letter from Blackwood, William to Tiele, Cornelis Petrus </li><li> Letter from Butz, Kilian to Kraus, Fritz Rudolf  </li><li>Letter from De Erven F. Bohn to William Blackwood &amp; Sons </li><li> Letter from De Erven F. Bohn to Lytton, Lord </li><li> Letter from De Erven F. Bohn, to Sampson Low, Marston and Company, London </li><li> Letter from Fuhri, Koenraad to Kruseman, Arie Cornelis  </li><li>Letter from Gamillscheg, Ernst to Huizinga, Johan </li><li> Letter from Hamel, J.A. van to Sijthoff, Albertus Willem </li><li> Letter from Harting, P. to Muller, Jacob Wijbrand </li><li> Letter from Hawkshaw, John to Tideman, Jan </li><li> Letter from Laufer, Berthold to Schmeltz, Johannes Diederich Eduard </li><li> Letter from Muller, Frederik to Tideman, Jan </li><li> Letter from Muller, Frederik to Sijthoff, Albertus Willem </li><li> Letter from Muller, Frederik to Sijthoff, Albertus Willem  </li><li>Letter from Schneider, Lina to Tiele, Cornelis Petrus  </li><li>Letter from Sijthoff, Albertus Willem to Hensbroek, Pieter Andreas Martin Boele van </li><li> Letter from Suringar, Gerard Tjaard Nicolaas to Kruseman, Arie Cornelis  </li><li>Letter from Wirth, Herman Felix to De Erven F. Bohn</div>
+<p> </p>
+<p><strong>Exercise 8</strong></p>
+<p>Create a stylesheet that can transform "poem.xml" (from the folder you have downloaded) into an HTML document that is presented looks as follows:</p>
+<div width="75%" style="background-color: #eff2f7; margin-left: 50px; margin-right: 50px; padding: 50px; ">
+
+<p><strong>Snow</strong></p>
+<p>The room was suddenly rich and the great bay-window was<br />
+  Spawning snow and pink roses against it<br />
+  Soundlessly collateral and incompatible:<br />
+  World is suddener than we fancy it.</p>
+<p>World is crazier and more of it than we think,<br />
+  Incorrigibly plural. I peel and portion<br />
+  A tangerine and spit the pips and feel<br />
+  The drunkenness of things being various.</p>
+<p>And the fire flames with a bubbling sound for world<br />
+  Is more spiteful and gay than one supposes -<br />
+  On the tongue on the eyes on the ears in the palms of one's hands -<br />
+  There is more than glass between the snow and the huge roses.</p>
+</div>
+<p> </p>
+<p><strong>Exercise 9</strong></p>
+<p>Download and open the file "<a href="https://digitalscholarship.nl/DMT/XSLT/wilde-windermere.zip">wilde-windermere.xml</a>". This contains the full text of the play <em>Lady Windermere's Fan</em> by Oscar Wilde, in TEI-markup. Write a stylesheet which can make the following selections in the play:</p>
+<ol>
+  <li>All parts spoken by Lord Darlington;</li>
+  <li>Parts in which Lord Windermere speaks of Mrs Erlynne;<br />
+    N.B. use <strong>contains( element , 'text' )</strong>. Also note that you can COMBINE two different conditions using the keyword 'and' , as follows: <strong>condition1 and condition</strong>2</li>
+  <li>Stage directions indicating the entrance of a character on the stage;</li>
+  <li>Parts spoken by Lady Windermere which consist of less than 50 characters. To test string-length. N.B. use <strong>string-length(p) &amp;lt; 50 </strong></li>
+</ol>
+<p>For questions 1, 2 and 3, you can use the code below as a basis. In this code, you only need to add the appropriate XPath expressions in for-each and in value-of.</p>
+<div width="75%" style="background-color: #eff2f7; margin-left: 50px; margin-right: 50px; padding: 50px; ">
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+ &lt;xsl:stylesheet  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  version="1.0"&gt;  
+&lt;xsl:template match="TEI"&gt; 
+
+ &lt;html&gt;    
+&lt;body&gt;  
+&lt;p&gt;    
+&lt;h3&gt;
+&lt;!-- Title t--&gt;
+&lt;/h3&gt; 
+ &lt;ul&gt;    
+&lt;!--   &lt;xsl:for-each select=""&gt; 
+ &lt;li&gt; 
+ &lt;xsl:value-of select="" /&gt; 
+ &lt;/li&gt; 
+ &lt;/xsl:for-each&gt; --&gt;   
+ &lt;/ul&gt;   
+   &lt;/p&gt; 
+ &lt;/body&gt; 
+ &lt;/html&gt;  
+&lt;/xsl:template&gt; 
+  &lt;/xsl:stylesheet&gt;</pre>
+</div>
+<p>Xpath can also be used to produce quantitative information about an XML file. The <strong>count()</strong> function is very useful for this purpose. Write an XSLT stylesheet which can produce data about the following aspects of the TEI file.</p>
+<ol start="5">
+  <li>The number of parts spoken by Lady Windermere</li>
+  <li>The number of parts spoken by Lady Windermere in the first act</li>
+</ol>
+<p>Use the code below as a basis.</p>
+<div width="75%" style="background-color: #eff2f7; margin-left: 50px; margin-right: 50px; padding: 50px; ">
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt; 
+
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  version="1.0"&gt; 
+&lt;xsl:template match="TEI"&gt; 
+ &lt;html&gt;  
+  &lt;body&gt;  
+ &lt;p&gt; 
+ &lt;h3&gt;The number of parts spoken by Lady Windermere:&lt;/h3&gt;  
+&lt;xsl:value-of select=""/&gt;  
+
+&lt;h3&gt;The number of parts spoken by Lady Windermere in the first act&lt;/h3&gt; 
+ &lt;xsl:value-of select=""/&gt;  
+&lt;/p&gt;  
+&lt;/body&gt;  
+&lt;/html&gt;  
+
+&lt;/xsl:template&gt;   
+
+&lt;/xsl:stylesheet&gt;</pre>
+</div>
+<p>Note that you do not have to build full XSLT stylesheets (you still can do so, of course). Oxygen provides an XPath engine in which you can test your XPath expressions. You can do this exercise by firstly writing down the expression in a text file. The complete Path expression can then be copied and pasted into the XPath engine in Oxygen.</p>
+<p><strong>Exercise 10</strong></p>
+<p>The stylesheet "tei-html.xsl" (in the zipped folder you've previously downloaded) can transform the descriptive markup in the TEI document to HTML elements that specify the typographic appearance. Read this XSLT stylesheet and try to determine which rules are given for the following TEI elements:</p>
+<ol>
+  <li>&lt;gap&gt;</li>
+  <li>&lt;supplied&gt;</li>
+  <li>&lt;pb&gt;</li>
+  <li>&lt;lb&gt;</li>
+  <li>&lt;title&gt;</li>
+  <li>&lt;hi rend="underlined"&gt;</li>
+</ol>
+<p> </p>
+</body>
+</html>
