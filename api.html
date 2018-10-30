@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+
+  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://digitalscholarship.nl/DMT/style2018.css">
+
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h2>Acquiring data via APIs</h2>
+<p>N.B. In the queries below, you can make use of API keys which can be downloaded <a href="keys.txt">here</a>.</p>
+<ol>
+  <li>The <strong><a href="http://developer.nytimes.com/docs/books_api/">NYT The Books API</a></strong> enables you to get data about books reviews and bestseller lists. <br>
+    Lists of bestsellers can be retieved using the following base URL: <br>
+    <strong>http://api.nytimes.com/svc/books/v3/lists </strong><br>
+    The API key must be given after the <strong>api-key</strong> parameter. <br>
+    You can use the <strong>names.xml</strong> function to get the complete list of bestseller names. <br>
+    For example:<br>
+    <strong>http://api.nytimes.com/svc/books/v3/lists/names.xml?api-key=0123456789 </strong><br>
+    To find a specific bestseller list, provide the date of of the list in the format YYY-MM-DD, and use the name of the list, in combination with the required data format. <br>
+    For example:<br>
+    <strong>http://api.nytimes.com/svc/books/v3/lists/2015-01-01/combined-print-and-e-book-fiction.xml?api-key=0123456789</strong></li>
+  <li>
+    <p>You can use the <strong><a href="https://www.goodreads.com/book/isbn/9780385537148?key=yZUIiWVAZOHzCFlFwIOTXA">GoodReads API</a></strong> to get data about book titles, ratings, reviews and related titles, among many other data. <br>
+      Base URL:<br>
+      <strong>https://www.goodreads.com/book/</strong><br>
+      The API key must be given after the <strong>key</strong> parameter. <br>
+      You can use the <strong>ISBN</strong> function to get the review statistics for a given book, using its ISBN.<br>
+      Example:<br>
+      <strong>https://www.goodreads.com/book/isbn/9780385537148?key=0123456789</strong></p>
+  </li>
+</ol>
+</body>
+</html>
