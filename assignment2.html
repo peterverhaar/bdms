@@ -57,7 +57,17 @@ Download a list of bestsellers from the New York Times, using the NYT’s books 
 <b>Scenario 3</b><br/> Download an article from the <a href="http://www.digitalhumanities.org/dhq/">Digital Humanities Quarterly</a> in TEI. Create a stylesheet that can produce the following sentence: “This article contains … paragraphs, and … section headings. …. Paragraphs contain a footnote”. Footnotes are encoded using the &lt;ptr&gt; element. Also create a bulleted list which displays the full references in the article’s bibliography. These references can be found in the &lt;listBibl&gt; element. Also list all the keywords that have been supplied under &lt;textclass&gt;, but only if the total number of keywords is higher than 5.
 <br/>N.B. To be able to work with the TEI file more easily, you can remove the code “xmlns=http://www.tei-c.org/ns/1.0” from the TEI root element.
 </p><p>
-<b>Scenario 4 </b><br/>Download a TEI-encoded play from the website of the <a href="https://www.folgerdigitaltexts.org/download/">Folger Shakespeare Library</a>.  Write a stylesheet that can produce the following sentence: “This play consists of … acts.". Next, choose a character from the play, and calculate data about the number of speeches spoken by this character (produce the sentence " The character [enter name of character here] has … speeches”).
+<b>Scenario 4 </b><br/>Download one of the following TEI files:
+<ul>
+<li><a href="https://digitalscholarship.nl/DMT/Assignments/XML/Hamlet.xml">Hamlet.xml</a></li>
+<li><a href="https://digitalscholarship.nl/DMT/Assignments/XML/Tempest.xml">Tempest.xml</a></li>
+<li><a href="https://digitalscholarship.nl/DMT/Assignments/XML/WintersTale.xml">Winters.xml</a></li>
+<li><a href="https://digitalscholarship.nl/DMT/Assignments/XML/RomeoAndJuliet.xml">RomeoAndJuliet.xml</a></li>
+
+</ul>
+
+
+Write a stylesheet that can produce the following sentence: “This play consists of … acts.". Next, choose a character from the play, and calculate data about the number of speeches spoken by this character (produce the sentence " The character [enter name of character here] has … speeches”).
 Note that the acts of the play are are all encoded using a &lt;div&gt; element. All the speeches in the play are encoded using the &lt;sp&gt; element. Create a list of all the spoken parts in the play which consists of less than 100 characters. Also display the total number of characters in between brackets. N.B. The length of a string of text can be calculated using the string-length() function.
 <br/><br/>
 <hr />
