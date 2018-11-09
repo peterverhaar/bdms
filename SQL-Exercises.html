@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+  <link rel="stylesheet" type="text/css" href="../style2018.css">
+<title>SQL Exercises</title>
+</head>
+
+<body>
+
+<h2>Database and SQL Exercises</h2>
+
+
+<!--
+<div class="header">
+<p class="header">N.B. <a href="http://bookandbyte.org/DMT/Exercises/SQL-Exercises-Answers.docx">The answers to these exercises can be found here</a></p>
+-->
+
+<p class="header"><span style="text-decoration: underline;">
+Exercise 1</span></p>
+<p>
+
+The <a href="http://www.theeuropeanlibrary.org/exhibition/" target="_blank" >Treasures exhibition</a>, created for the website of the European Library, displays a number of artifacts from the national libraries of Europe. Try to reconstruct the database underlying this website.
+
+
+</p>
+
+
+<p class="header"><span style="text-decoration: underline;">
+Exercise 2</span></p>
+<p class="header">Open the database <a href="https://digitalscholarship.nl/DMT/Exercises/treasure.zip">treasure.accdb</a>, look at the design of the various tables in this database and specify which relations have been defined between objects in these tables. Also note the cardinality of these relations. The ERD of this database can be found <a href="https://digitalscholarship.nl/DMT/Exercises/treasure.jpg">here</a>.</p>
+
+</div>
+<p class="header"><span style="text-decoration: underline;">
+Exercise 3</span></p>
+<p class="header">During the seminar on 6 November, you have worked with an export from the Short Title Catalogue of the Netherlands in XML. Create a design for a database which can capture the same data in the form of a relational database.</p>
+<p class="header">Create a text file which gives information about the various entities you would like to propose:</p>
+<p class="header">ENTITY: [Name Table]<br/>
+ATTRIBUTES:<br/>
+[Attribute1] (PK)<br/>
+[Attribute2]<br/>
+[Attribute3]</p>
+<p class="header">If one of the attributes serves as a foreign key, indicate this by placing the text "FK, connected to table [TABLE NAME]" in brackets, after the name of the attribute.</p>
+
+<div class="header">
+
+<span style="text-decoration: underline;">Exercise 4</span>
+<p class="header">Below, you can find some data about books published by De Erven F. Bohn and about letters from the Bohn archive. In addition, two fragments are given from transcriptions of two letters from this archive. Analyse the data and structure them in such a way that the model can be mapped to a relational database. To do this, identify the relevant entities and determine the relationships between them. Also name the attributes which need to be recorded for each entity. During the analysis, bear in mind that we are ultimately going to use the database to build a website that offers functionalities that are similar to those found at the <a href="http://ckcc.huygens.knaw.nl/epistolarium/">ePistolarium website</a>.</p>
+
+
+<pre>Title: the Tragedy of Julius Caesar
+ Author/Creator: Shakespeare, William 1564-1616
+ Translated by: Kok, A.S. 1831-1915
+ Description: Note: Rugtitel: Julius Caesar.
+ Note: Oorspr. uitg.: 1623.
+ Publisher: Haarlem : Bohn
+ Date: 1872
+ Form: 175 p. ; 19 cm.
+ Language: Dutch
+
+  Title: Syrlin
+  Author/Creator: Ouida
+  Translated by: Huygens, Cornelie 1848-1902
+  Publisher: Haarlem : Erven F. Bohn
+  Date: 1891
+  Form: 2 dl. ; 23 cm.
+  Language: Dutch
+
+  Title: Letter from De Erven F. Bohn Haarlem to Cornélie Huygens (1848-1902)
+  Author/Creator: De Erven F. Bohn (Haarlem).
+  Recipient: Huygens, Cornélie, 1848-1902
+  Shelfmark: BOH C 6
+  Note: fol. 403, 406, 438.
+  Publisher: Haarlem
+  Date: 1881-1882
+  Language: Dutch
+
+  Title: Letter from Ouida to De Erven F. Bohn Haarlem
+  Author/Creator: Ouida
+  Recipient: De Erven F. Bohn (Haarlem)
+  Shelfmark: BOH C 109
+  Publisher: S.l.
+  Date: 1894
+  Language: English</pre>
+
+<pre><b>Transcription of UBL BOH C 80 / Ouida</b>
+
+Dear Sirs
+ I will ask Mrs Chatto to
+ send you <i>The
+ Village Commune</i>
+ at once [...]
+ Ouida
+
+<b>Transcription of BOH C 71 / Lytton (2)</b>
+
+Dear Sirs,
+ Last year I accepted the offer I had received from
+ you by telegraph of 40 £
+ for the purchase of the
+ right of translating my
+ father's novel <i>Kenelm
+ Chillingly</i> of which a
+ copy was forwarded to
+ you [...]
+ Lord Lytton</pre>
+
+
+
+<span style="text-decoration: underline;">Exercise 5</span>
+<p class="header">Below, you can find some unstructured data items. Analyse the data and structure them in such a way that the model can be mapped to a relational database. To do this, identify the relevant entities and determine the relationships between them. Also name the attributes which need to be recorded for each entity, and the datatype of each attibute.</p>
+<p class="header">When you are satisfied with your analysis, create your database in Microsoft Access and fill it with the data.</p>
+
+
+<pre><code><code>Kirberger, Willem Hendrik
+ lived:1824-1897
+ born in: Amsterdam
+ died in: Velp
+
+ Kruseman, Arie Cornelis 1818-1894
+ Born in: Haarlem
+ Died in: Haarlem
+ Author of:
+ <i>Bouwstoffen voor een geschiedenis van den Nederlandschen boekhandel gedurende de halve eeuw 1830-1880</i>. 2 vols.
+ Published by P.N. van Kampen & Zoon, Amsterdam in 1886-1887.
+ <i>Aanteekeningen betreffende den boekhandel van Noord-Nederland in de 17e en 18e eeuw</i>.
+ 655 p. Amsterdam : Van Kampen, 1893
+
+ Louis D. Petit
+ Lived: 1847-1918
+ born in: Amsterdam
+ died in: Leiden
+
+ Motley, John Lothrop
+ Lived: 1814-77
+ Born: Dorchester, Mass., USA
+ Died: Dorchester, UK
+ Author of: <i>The Rise of the Dutch Republic</i>. 3 vols.
+ published by John Murray Publishers Ltd., 338 Euston Road in London in 1856
+ <i>The life and death of John of Barneveld, advocate of Holland : with a view of the primary causes and movements of the Thirty years' war</i>.
+ Published by Martinus Nijhoff, The Hague, 1874
+
+ LTK 2044
+ From: Kruseman, Arie Cornelis, 1818-1894
+ To: Petit, Louis D., 1847-1918
+ Place: The Hague Inclusive
+ dates: 1886-1889
+ Language: Dutch
+ Number of letters: 5
+
+ LTK 1504
+ Letters from Motley, John Lothrop, 1814-1877
+ To: Kruseman, Arie Cornelis, 1818-1894
+ Place: The Hague
+ Date: 1872
+ Language: Dutch
+ Number of letters: 2
+
+ LTK 1509: 1
+ Letters from W.H. Kirberger
+ To: A.C. Kruseman
+ Place: Amsterdam
+ Inclusive dates: 1879-80
+ Language: Dutch
+ Number of letters: 2</pre>
+
+</code></code>
+</pre>
+
+<span style="text-decoration: underline;">Exercise 6</span>
+<p class="header">Same as Exercise 3.</p>
+
+
+<pre>
+  Edward Gibbon (Putney, 1737 – London January 16, 1794)
+  The history of the decline and fall of the Roman Empire / Edward Gibbon.
+  London, Baynes, 1782-1788
+
+  Thomas Carlyle (Ecclefechan, 4 december 1795 - Londen, 5 februari 1881)
+  The French Revolution: A History.
+  Leipzig : Tauchnitz, 1851
+
+  George Eliot (Nuneaton, 22 November 1819 – London, 22 December 1880)
+  Adam Bede.
+  Edinburgh : William Blackwood, 1859.
+
+  The Mill on the Floss.
+  Edinburgh [etc.] : Blackwood, 1878
+
+  Registration of loans from the National Library, The Hague:
+  Borrowed by: Thorbecke
+  Book: Gibbon
+  Borrowed: 20 April 1861
+  Returned: 14-06-1861
+
+  Borrowed by: Dominicus Blankenheym
+  Book: Carlyle, French Revolution
+  Borrowed: 02 July 1857
+  Returned: 24 July 1857
+
+  Borrowed by: Van Pallant
+  Book: Adam Bede
+  Borrowed: 1902, 12 November
+  Returned: 1903, 23 January
+
+  Borrowed by: W. Schimmelpenninck
+  Book: Roman Empire (Gibbon)
+  Borrowed: 04 September 1878
+  Returned: 14 December 1878
+
+  Borrowed by: Van Pallant, W.
+  Book: Gibbon
+  Borrowed: 20 December 1878
+  Returned: 15 March 1879
+
+  Borrowed by: Van Pallant
+  Book: George Eliot, Mill on the Floss
+  Borrowed: 20 December 1878
+  Returned: 29 January 1879
+
+  Visitors:
+  Dr.Mr. Johan Rudolf Thorbecke (Zwolle, 14 January 1798 - Den Haag, 4 June 1872)
+  D. Blankenheym (Rotterdam, 25 March1797 - Rotterdam, 6 September 1872)
+  Mr. W.A.A.J. baron Schimmelpenninck van der Oye (Voorst, 18 september 1834 - Voorst, 31 augustus 1889) Mr. W.C. baron van Pallandt van Waardenburg (The Hague, 12 October 1836 - Waardenburg, 22 May 1905)
+
+</pre>
+
+
+<span style="text-decoration: underline;">Exercise 7</span>
+<p class="header">Download the database <a href="http://bookandbyte.org/DMT/Exercises/treasure.zip">treasure.mdb</a>.The ERD of this database can be found <a href="http://bookandbyte.org/DMT/Exercises/treasure.jpg">here</a>. For questions (f) and following, you need to work with so-called aggregate functions, such as COUNT() or MIN(). In MySQL, the opening bracket needs to be placed directly after the name of the function.</p>
+Write queries that can return the following information:
+<ol type="a">
+	<li>The last name, the first name and the year of birth of all the persons in the table CREATOR. Sort the rows by year of birth. The most recent year should appear first.</li>
+	<li>All the columns in the table CITY, and sort the rows alphabetically, by name of the city.</li>
+	<li>The treasures that were produced after 1800. Display only the title and the year</li>
+	<li>The creators whose first name starts with the letter "W"</li>
+	<li>The distinct subject codes in the table TREASURE, and sort the result alphabetically.</li>
+	<li>The year of the oldest treasure in the database.</li>
+	<li>The number of countries in the table CREATOR.</li>
+	<li>The most recent year of death in the table CREATOR.</li>
+	<li>The oldest treasure from each library. For this query, you only need to work with the identifiers of the libraries and not with their full names.</li>
+	<li>The number of persons for each country in the table CREATOR.</li>
+	<li>Those libraries that are represented by two or more treasures.</li>
+	<li>Those subjects that have been assigned to two or more treasures in the database.</li>
+	<li>The title, year, and provide a full description of the subject code of all the treasures in the database.</li>
+	<li>The names of all the libraries and the names of the cities in which they are located.</li>
+	<li>A list with all names of all cities and the full names of the countries in which they are situated.</li>
+	<li>The title, year, and a full description of the subject code of all treasures, and the full names of their creators. Sort the list alphabetically by the last name of the creator.</li>
+</ol>
+You can test your queries in MS Access. Alternatively, your queries can also be <a href="http://bookandbyte.org/DMT/Exercises/MySQL_Treasure.html" target="_blank" rel="noopener">tested in MySQL</a>.
+
+Answers to the <a href="http://bookandbyte.org/DMT/Exercises/Q6_Answers.docx">questions can be found here</a>
+
+ 
+
+<span style="text-decoration: underline;">Exercise 8</span>
+
+The database that was created for this exercise is based on a list of <a href="http://www.theguardian.com/news/datablog/2012/aug/09/best-selling-books-all-time-fifty-shades-grey-compare">UK's 100 best-selling books</a>, which was published by the Guardian. Information about the design of this database can be found <a href="http://bookandbyte.org/DMT/Exercises/SQL/Bestsellers_SQL.txt" target="_blank" rel="noopener">here</a>. Use this database to answer the following questions. The queries can be entered in the field below. These queries will then be executed in an implementation of this database in MySQL.
+<div class="header">
+<ol type="a">
+	<li>Which authors have written more than one beststeller?</li>
+	<li>Which publishers are responsible for more than three bestsellers?</li>
+	<li>What are the best-selling books in the genre "Popular Science"?</li>
+	<li>What is the average number of sales of a book written by J.K. Rowling?</li>
+</ol>
+You can run these queries in <a href="http://bookandbyte.org/DMT/Exercises/MySQL_BestSellers.html" target="_blank" rel="noopener">MYSQL</a>.
+
+The results of SQL queries can also be visualised. The results of the queries that are given in the text field below will be visualised as a bar chart. The field that you mention first after "SELECT" will be shown on the Y-Axis, and the lengths of the bars will be determined by the values for the field that you mentions secondly. Create bar charts which can display the following information:
+
+</div>
+<div class="header">
+<ol start="5" type="a">
+	<li>For each genre, show the average number of sales</li>
+	<li>For each genre, show the maximum number of books that have been sold</li>
+	<li>For each author, show the total number of sales</li>
+	<li>For each year, show the total number of bestsellers</li>
+</ol>
+You can run these queries in <a href="http://bookandbyte.org/DMT/Exercises/MySQL_BestSellers.html" target="_blank" rel="noopener">MYSQL</a>.
+
+ 
+
+<span style="text-decoration: underline;">Exercise 9</span>
+
+</div>
+<div class="header">
+
+Download the database <a href="http://bookandbyte.org/DMT/Exercises/booktrade.zip">booktrade.mdb</a>. The ERD of this database can be found <a href="http://bookandbyte.org/DMT/wp-content/uploads/2016/12/DMT2016_SQLEx7_ERD.pdf" target="_blank" rel="noopener">here</a>. Write queries that can returns the following information:
+<ol type="a">
+	<li>The titles of all the books in alphabetical order.</li>
+	<li>The titles and years of release of all the movies in the database.</li>
+	<li>The different country codes that have been used in the table PERSON.</li>
+	<li>The full names (last and first name) of all persons born after 1900.</li>
+	<li>The number of people born after 1875.</li>
+	<li>The number of years in between the oldest and the most recent film.</li>
+	<li>The number of books each author has written. For the authors, give only the ID.</li>
+	<li>The IDs of the the authors who have written two or more books.</li>
+	<li>The title and the full names of the authors of all the books in the database.</li>
+	<li>The full name of all the persons in the database and the name of the country in which they were born.</li>
+	<li>The titles of the books whose author is born in the United States.</li>
+	<li>The titles of all the movies and the full names of their directors.</li>
+	<li>The titles of all the books that have been written before 1950.</li>
+	<li>The full name and the year of birth of all persons born in The Netherlands before 1900. In this query, use the <b>name</b> of the country, and not the country code.</li>
+	<li>For each country in table PERSON, select the number of persons that were born in that country. The result set should display the <b>name</b> of the country, followed by the the number of persons.</li>
+	<li>The title and full name of the authors of the translations in the table BOOK. Translations can be recognised on the basis of the fact that there is a reference to the original they are based on. They check if a column is not empty, you can use "IS NOT NULL".</li>
+	<li>All the companies that Koenraad Fuhri has worked for. Also select the years during which Fuhri worked for these companies and arrange these periods chronologically.</li>
+	<li>For all the books in the database, their title, year of publication and the name and the city of the publisher.</li>
+	<li>The different nationalities of the persons in the database. Provide only the names of the countries. Each nationality must be shown only once.</li>
+	<li>The titles of the books that were written by an author from the United States. Use the <b>name</b> of the country to find these books, and not the country code.</li>
+	<li>For each city, provide the name of that city and the number of companies that are based in that city.</li>
+	<li>The number of books that have been published by each company. Select the name of the publisher. Companies which have not published any books can of course be ignored.</li>
+</ol>
+You can run these queries in <a href="http://bookandbyte.org/DMT/Exercises/MySQL_Booktrade.html" target="_blank" rel="noopener">MYSQL</a>.
+
+<span style="text-decoration: underline;">Exercise 10</span>
+
+</div>
+<div class="header">
+
+Below, you can find the ERD for the BTCP database:
+
+</div>
+<div class="header"></div>
+<div class="header">
+
+<img src="http://bookandbyte.org/DMT/Exercises/BTCP_ERD.jpg" alt="BTCP_ERD.jpg" width="850" />
+
+</div>
+<div class="header"></div>
+<div class="header">Write queries that can return the following information, and comment on their results:</div>
+<div class="header">
+<ol type="a">
+	<li>All books published by Bohn, in alphabetical order.</li>
+	<li>The full names (last and first name) of all persons born after 1900, together with the country in which they were born. What do you notice about the nationalities involved? How can you check if this is a coincedental pattern in the data, or a possible error in your query?</li>
+	<li>All letters which have NOT been written in the Netherlands.</li>
+	<li>The number of years in between the oldest and the most recent book. Warning: the result might be a bit unexpected. How can you explain this result?</li>
+	<li>A list of all the series in which Bohn has published books, together with the number of books in that series.</li>
+	<li>The IDs of the authors who have written two or more books.</li>
+	<li>The different languages of the letters. Also indicate how many letters there are in each language.</li>
+</ol>
+You can run these queries in <a href="http://bookandbyte.org/DMT/Exercises/MySQL_Bohn.html" target="_blank" rel="noopener">MYSQL</a>.
+
+</div>
+<span style="text-decoration: underline;">Exercise 11</span>
+
+</div>
+As you can see in the ERD, the table CITY in the database for the BTCP (see exercise 9) has two attributes named LONGITUDE and LATITUDE. These specify the geographic coordinates of the city that is described in this table. Using these geographic coordinates, the <a href="http://bookandbyte.org/BTCP/map_sql.php">results of SQL queries can also be visualised on a map</a>. Try to do this using the exercises below. In these queries, the select list must contain (1) The name of the city, (2) The longitude and (3) the latitude. Or more concretely, the Select-list needs to be be "<b>SELECT CITY.NAME, LATITUDE, LONGITUDE</b>". N.B. The locations of the incoming mail are stored in column "PLACE_RECEIVED". The locations of the outcoming mail can be found in "PLACE_SENT"
+<ol>
+	<li>Display the locations of all the letters that were received</li>
+	<li>Display the locations of the letters that were received in the second half of the 19th century</li>
+	<li>Display the locations of the letters that were received from the Western hemisphere (e.g. Unites States and UK West to Greenwich).</li>
+</ol>
+ 
+
+<span style="text-decoration: underline;">Exercise 12</span>
+
+For this question, make use of the Elsevier database. The CREATE STATEMENTS of this database can be found <a href="http://www.bookandbyte.org/DMT/Exercises/SQL/assignment3-SQL.html">here</a>.
+
+Explain how you would go about answering the following research question:
+
+<em>Which subjects did the Elseviers focus on? Can you see a historical development? </em>
+
+Formulate the type of information you would look for, then create queries with which you could obtain that information. Also explain what the result of your query looks like. Usually, you need a succession of queries for different approaches to the research question.
+
+This question mainly test your ability to translate open research questions to concrete SQL queries. The focus, in other words, is primarily on the method that you use to address these questions. In this question, the exact results which are returned by the database are of less importance.
+
+</body>
+</html>
