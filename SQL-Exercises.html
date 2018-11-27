@@ -13,10 +13,8 @@
 <h2>Database and SQL Exercises</h2>
 
 
-<!--
-<div class="header">
-<p class="header">N.B. <a href="http://bookandbyte.org/DMT/Exercises/SQL-Exercises-Answers.docx">The answers to these exercises can be found here</a></p>
--->
+<p class="header">N.B. <a href="https://github.com/peterverhaar/bdms/raw/master/SQL-Exercises-Answers.docx">The answers to these exercises can be found here</a></p>
+
 
 <p class="header"><span style="text-decoration: underline;">
 Exercise 1</span></p>
@@ -288,6 +286,25 @@ You can run these queries in <a href="https://sharedtaste.leidenuniv.nl/PHP/BDMS
 
 <p>
 
+  <p>
+  <span style="text-decoration: underline;">Exercise 9</span>
+
+  </p>
+  <p>
+  </div>
+
+The Sijthoff database contains data about all the correspondence in the Sijthoff archive. It is based on metadata downloaded from the catalogue of Leiden Unibersity Libraries.
+
+  As you can see in the ERD, the table PLACE has two attributes named LONGITUDE and LATITUDE. These specify the geographic coordinates of the city that is described in this table. Using these geographic coordinates, the <a href="http://bookandbyte.org/BTCP/map_sql.php">results of SQL queries can also be visualised on a map</a>. Try to do this using the exercises below. In these queries, the select list must contain (1) The name of the city, (2) The longitude and (3) the latitude. Or more concretely, the Select-list needs to be be "<b>SELECT CITY.NAME, LATITUDE, LONGITUDE</b>". N.B. The locations of the incoming mail are stored in column "PLACE_RECEIVED". The locations of the outcoming mail can be found in "PLACE_SENT"
+  <ol>
+  	<li>Display the locations of all the letters that were received</li>
+  	<li>Display the locations of the letters that were received in the second half of the 19th century</li>
+  	<li>Display the locations of the letters that were received from the Western hemisphere (e.g. Unites States and UK West to Greenwich).</li>
+  </ol>
+   
+  </p>
+
+<!--
 
 <span style="text-decoration: underline;">Exercise 9</span>
 </p>
@@ -295,6 +312,8 @@ You can run these queries in <a href="https://sharedtaste.leidenuniv.nl/PHP/BDMS
 
 
 </div>
+
+
 <div class="header">
 
 Download the database <a href="http://bookandbyte.org/DMT/Exercises/booktrade.zip">booktrade.mdb</a>. The ERD of this database can be found <a href="http://bookandbyte.org/DMT/wp-content/uploads/2016/12/DMT2016_SQLEx7_ERD.pdf" target="_blank" rel="noopener">here</a>. Write queries that can returns the following information:
@@ -360,35 +379,9 @@ You can run these queries in <a href="http://bookandbyte.org/DMT/Exercises/MySQL
 </div>
 
 </p>
-<p>
-<span style="text-decoration: underline;">Exercise 11</span>
 
-</p>
-<p>
-</div>
-As you can see in the ERD, the table CITY in the database for the BTCP (see exercise 9) has two attributes named LONGITUDE and LATITUDE. These specify the geographic coordinates of the city that is described in this table. Using these geographic coordinates, the <a href="http://bookandbyte.org/BTCP/map_sql.php">results of SQL queries can also be visualised on a map</a>. Try to do this using the exercises below. In these queries, the select list must contain (1) The name of the city, (2) The longitude and (3) the latitude. Or more concretely, the Select-list needs to be be "<b>SELECT CITY.NAME, LATITUDE, LONGITUDE</b>". N.B. The locations of the incoming mail are stored in column "PLACE_RECEIVED". The locations of the outcoming mail can be found in "PLACE_SENT"
-<ol>
-	<li>Display the locations of all the letters that were received</li>
-	<li>Display the locations of the letters that were received in the second half of the 19th century</li>
-	<li>Display the locations of the letters that were received from the Western hemisphere (e.g. Unites States and UK West to Greenwich).</li>
-</ol>
- 
-</p>
-<p>
-<span style="text-decoration: underline;">Exercise 12</span>
+-->
 
-</p>
-<p>
-For this question, make use of the Elsevier database. The CREATE STATEMENTS of this database can be found <a href="http://www.bookandbyte.org/DMT/Exercises/SQL/assignment3-SQL.html">here</a>.
-</p>
-<p>
-Explain how you would go about answering the following research question:
-
-<em>Which subjects did the Elseviers focus on? Can you see a historical development? </em>
-
-Formulate the type of information you would look for, then create queries with which you could obtain that information. Also explain what the result of your query looks like. Usually, you need a succession of queries for different approaches to the research question.
-
-This question mainly test your ability to translate open research questions to concrete SQL queries. The focus, in other words, is primarily on the method that you use to address these questions. In this question, the exact results which are returned by the database are of less importance.
 
 </body>
 </html>
