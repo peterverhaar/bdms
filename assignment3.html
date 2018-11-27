@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DMT Assignment 3</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://digitalscholarship.nl/DMT/style2018.css">
+
+</head>
+
+<body>
+<p> 
+<h2>
+Digital Media Technology<br/>
+Assignment 3
+</h2>
+
+</p>
+
+
+This assignment consists of four questions. It is due on Tuesday, 18 December, before 23:59. please send in <a href="mailto:bdms.staff@gmail.com">via gmail</a>.
+
+This Assignment can be sent in as one document (PDF or DOC) including the SQL-queries for Question 1 and 3, and any diagram you wish to insert for Question 2. Please take care to name and format your document according to the BDMS-stylesheet.
+<h3>Question 1 (4 points)</h3>
+In this question, you need to write four queries for two different relational databases. These databases have been <a href="https://sharedtaste.leidenuniv.nl/PHP/BDMS/assignment3-SQL.html">implemented in MySQL</a>.
+
+
+
+<p><b>
+Sijthoff Database</b></p>
+
+<ol>
+  <li>
+Select all the letters which have been sent by from cities in the Southern Hemisphere (i.e. cities which have a negative latitude). Display the IDs of the letters, the names of the cities and the languages in which these letters are written. Use the full name of the language, and not the language code.
+</li>
+<li>The names and the locations (the city names) of all the correspondents who have sent more than two letters to A.W. Sijthoff. N.B. Note that there are two types of links in between LETTER and CORRESPONDENT. The first link represents the senders, and the second link represents the recipients. To solve this query, the table CORRESPONDENT needs to be joined twice to table LETTER. You need to use aliases to distinguish these different roles.
+</li>
+</ol>
+
+<p><b>
+STCN Database</b></p>
+<ol>
+  <li>Select the books that have been printed by François Halma about the subject "Economics". In your result, display the title, the full name of the author (if available), and the year of publication.
+  </li>
+
+  <li>Display the full names of all the authors who have written books about the topic "French language and literature".
+</li>
+</ol>
+
+
+</ol>
+<h3>Question 2 (3 points)</h3>
+Analyse the data below and try to structure them in such a way that they can be used efficiently in a relational database. To do this, identify the relevant entities and attributes and determine the relationships between these entities. Write a brief paragraph in which you explain the entities and the attributes that you have chosen. It is not necessary to provide a complete entity-relationship diagram, but you may do so, of course.
+<pre>Book auctions
+
+Date: 15 May 1682
+Collection: Sir Richard Smith
+Auctioneer: Richard Chiswell
+Location: British Library
+
+Date: 4 July 1681
+Collections: Revd. R. Button; Dr. Thankfull Owen; Revd. Dr. William Howell
+Auctioneer: E. Millington
+Location: British Library
+
+Date: 30 June 1686
+Collection: Edmund Castell
+Auctioneer: E. Millington
+Location: Cambridge University
+
+Collection contents
+
+Richard Smith collection includes:
+J.F. Ferrandus, De nephrisis et lithiasis seu de renum et visicae calculi definitione, causis, signis, praedictione et curatione (8vo, Paris, 1570)
+J. Locke, Questions Concerning the Law of Nature (4to, London, 1664) J. Wilkins, Of the Principle and Duties of Natural Religion (8vo, London, 1670)
+
+Edmund Castell collection includes:
+E. Castell, Lexicon Heptaglotton Hebraicum, Chaldaicum, Syriacum, Samaritanum, Aethiopicum, Arabicum, et Persicum (8vo, Cambridge, 1669)
+Bonaventura Vulcanius, Callimachi Cyrenaei hymni, epigrammata et fragmenta [...] (4to, Antwerp, 1584)
+R. Percyvall, Bibliotheca Hispanica (4to, London, 1591)</pre>
+<div class="box"></div>
+<h3>Question 3 (3 points)</h3>
+
+
+<p>
+
+This question mainly tests your ability to translate an open research question to concrete SQL queries; if you were presented with a research question, which methods would you apply to address it? The exact results which are returned by the database are, in this case, of less importance. The research question is as follows:
+</p>
+<p>
+“Does <a href="https://sharedtaste.leidenuniv.nl/PHP/BDMS/MySQL_Bestsellers.html">The Guardian’s bestsellers database</a> (that you have worked with)  provide support for the hypothesis that the ‘winner’ increasingly ‘takes it all’ on the market for trade publishing? In other words, can we claim that book buyers focus increasingly on a small number of titles in a limited number of genres which they buy in large quantities, instead of acquiring a wider range of different titles sold in smaller numbers?”
+</p>
+<p>
+  <ul><li>
+Explain how you would go about answering this research question. Formulate the type of information you would look for, and then create queries with which you could obtain that information from the database (its structure can be deduced from the SQL statements, found here). Also explain what the result of your queries would look like. Note that you would usually need a succession of queries for different approaches to the research question. (300 w., 2 p.)
+</li>
+<li>
+As was explained, the bestsellers database was obtained from the website of The Guardian. The article that was written about this data set highlights a number of interesting aspects of this data set. It also encourages readers to carry out further experiments with the database. Which interesting findings can you add to the facts which are discussed in the article? (300 w., 1 p.)
+</li>
+</ul>
+
+</p>
+
+</body>
+</html>
