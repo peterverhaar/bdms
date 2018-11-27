@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DMT Assignment 3</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://digitalscholarship.nl/DMT/style2018.css">
+
+</head>
+
+<body>
+<p>
+	<h2>Digital Media Technology<br/>individual research project</h2>
+	</p>
+
+<p><strong>Option 1</strong></p>
+<p>The New York Times Books API can be used to retrieve data about books reviews and about bestseller lists.&nbsp;The bestellers which were in the &quot;combined print and e-book fiction&quot; list from 1 January 2015 can be found, for instance, using the following query:<br>
+  <strong><a href="http://api.nytimes.com/svc/books/v3/lists/2015-01-01/combined-print-and-e-book-fiction.xml?api-key=cda705355dc731a3b819ac80ce02578b:15:72378286">http://api.nytimes.com/svc/books/v3/lists/2015-01-01/combined-print-and-e-book-fiction.xml?api-key=cda705355dc731a3b819ac80ce02578b:15:72378286</a></strong> <br>
+  The New York Times also publishes other types of beststellers lists. Information about the various categories can be found using the following API query:<br>
+  <strong><a href="http://api.nytimes.com/svc/books/v3/lists/names.xml?api-key=cda705355dc731a3b819ac80ce02578b:15:72378286">http://api.nytimes.com/svc/books/v3/lists/names.xml?api-key=cda705355dc731a3b819ac80ce02578b:15:72378286</a></strong><strong>&nbsp;</strong>In the lists API, you need to use the name of the lists as given in the element &lt;list_name_encoded&gt;</p>
+  <p>
+  For each title on the bestseller list, the following data is available:</p>
+<ul>
+  <li>Week_on_list</li>
+  <li>Rank_last_week</li>
+  <li>Publisher</li>
+  <li>Isbn10</li>
+  <li>Isbn13</li>
+</ul>
+<p>Information about the author may be found via WikiData. This resource may be used to find the following information about the author:</p>
+<ul>
+  <li>Gender</li>
+  <li>Nationality</li>
+  <li>Awards received</li>
+</ul>
+	<p>The titles on the bestseller lists may also be connected to data created at <a href="https://www.goodreads.com/book/isbn/9780385537148?key=yZUIiWVAZOHzCFlFwIOTXA">GoodReads.com</a>a>. Given a certain ISBN, the following data can be retrieved:</p>
+<ul>
+<li>
+	Ratings_Count</li>
+	<li>Reviews_count</li>
+	<li>
+Average_Rating</li>
+	</ul>
+
+
+<p><strong>Option 2</strong></p>
+	<p>The research oroject &ldquo;Durable Access to Bookhistorical Data&rdquo; concentrates on a born-digital academic collection which was created by prof. Paul Hoftijzer. Hoftijzer&rsquo;s archive contains the results from extensive book historical research conducted over the course of several decades in a range of archival institutions in Leiden and in other cities. It contains detailed descriptions of people, organisations and events relevant to the Leiden book industry in Leiden in the early modern period. An excerpt from the original data set <a href="https://github.com/peterverhaar/booktrade/blob/master/LEIDENA.docx">can be found here</a>. </p>
+<p>The addresses have been enriched using geographic coordinates.</p>
+  <strong>Option 3</strong></p>
+<p>Leiden University Libraries has catalogued all the books that have been published by The Erven F. Bohn. The records contain data about the following aspects:</p>
+<ul>
+  <li>Title</li>
+  <li>Year of publication</li>
+  <li>Subjects</li>
+  <li>Author</li>
+  <li>Series</li>
+</ul>
+<p>The data sets covers a period ranging roughly from 1780 to 1940. An export, downloaded from the catalgue, can be <a href="https://github.com/peterverhaar/booktrade/blob/master/bohn_books.xml">downloaded here</a>.</p>
+<p>For the purpose of his PhD dissertation, dr. Steven Claeyssens has also developed a more extensive data set about the titles published by Bohn in the twentieth century. The data set also contains information about the number of copies printed, number of pages and the prices at which the books were sold. <br>
+  See: https://openaccess.leidenuniv.nl/handle/1887/29087</p>
+</body>
+</html>
