@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Assignment 3 - SQL</title>
+
+     <style>
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400);
+
+html {
+	margin: 0;
+    height: 100%;
+	background-color: #f4f5f7 ;
+
+}
+
+
+body  {
+	color: #333;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	margin-left: 15% ;
+	margin-right: 15% ;
+	margin-top: 5% ;
+
+
+}
+
+
+
+     </style>
+
+    </head>
+    <body>
+
+
+        <h2>Sijthoff Correspondence</h2>
+
+        <table width="100%" border="0" cellpadding="10">
+            <tr >
+                <td >
+                    <a href="Sijthoff_SQL.txt" target="_blank">
+                    <img src="https://digitalscholarship.nl/DMT/Exercises/Sijthoff.jpeg" width="500"/>
+                    </a>
+                </td>
+
+            </tr>
+
+            <tr style="height: 200px; ">
+                <td >
+
+
+               <form target="_blank"  action="sqlTable.php" enctype="multipart/form-data" method="post">
+			<input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+			<input type="hidden" name="stage" value="process" />
+      <input type="hidden" name="database" value="sharedtaste" />
+			<textarea cols="40" rows="8" name="sql"></textarea>
+			<br/>
+			<input type="submit" value="Execute query">
+		</form>
+
+                </td>
+            </tr>
+        </table>
+
+
+
+
+
+        <h2>STCN Database</h2>
+
+        <table width="100%" border="0" cellpadding="10">
+
+
+
+
+            <tr style="height: 200px; ">
+                <td >
+
+
+              <form target="_blank"  action="sqlTable.php" enctype="multipart/form-data" method="post">
+			<input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+			<input type="hidden" name="stage" value="process" />
+      <input type="hidden" name="database" value="sharedtaste" />
+			<textarea cols="40" rows="8" name="sql"></textarea>
+			<br/>
+			<input type="submit" value="Execute query">
+		</form>
+
+                </td>
+            </tr>
+
+   <tr >
+                <td >
+
+
+<img src="STCN.jpeg" width="500"></img>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </body>
+</html>
