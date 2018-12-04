@@ -1,0 +1,16 @@
+
+
+https://www.wikidata.org/w/api.php?action=wbsearchentities&search=John%20Grisham&language=en&format=xml
+
+<http://www.wikidata.org/entity/Q106465>
+
+https://query.wikidata.org/
+
+SELECT ?name ?g ?gLabel ?l ?occ ?aw ?edu WHERE {
+  <http://www.wikidata.org/entity/Q106465> wdt:P21 ?g .
+  <http://www.wikidata.org/entity/Q106465> wdt:P1412 ?l .
+  <http://www.wikidata.org/entity/Q106465> wdt:P106 ?occ .
+  <http://www.wikidata.org/entity/Q106465> wdt:P166 ?aw .
+  <http://www.wikidata.org/entity/Q106465> wdt:P69 ?edu .
+SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" }
+}
