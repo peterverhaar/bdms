@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: #CCCCCC;
+    font-family: arial,helvetica,sans-serif;
+	font-size: 12pt;
+    padding: 0;
+    position: relative;
+    text-align: center;
+}
+
+#all {
+    background-color: #F1F1F1;
+    margin: 0 auto;
+    width: 990px;
+    max-width: 990px;
+    padding: 0;
+    text-align: left;
+}
+
+#header {
+    background: none repeat scroll 0 0 #F1F1F1;
+    height: 210px;
+    margin-top: -10px;
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+}
+
+#languageswitch {
+    font-size: 10pt;
+    margin-top: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 400px;
+    z-index: 2000;
+}
+
+#contentarea{
+    overflow: hidden;
+    position: relative;
+	font-size: 12pt;
+	line-height: 150%;
+}
+
+#header ul.menu {
+    background-color: transparent;
+    border: medium none;
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    height: 20px;
+    left: 10px;
+    list-style-type: none;
+    position: absolute;
+    top: 188px;
+    z-index: 20;
+}
+
+#header ul {	
+    max-width: 990px;
+    display: block;
+    list-style-type: none;
+    margin: 0 0 1px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+    width: 100%;
+}
+
+ul.menu{
+    margin: 0;
+    padding: 0;
+	list-style-type: none;
+}
+
+h1#logo {
+    font-size: 3em;
+    margin: 25px 0 0 15px;
+    line-height: 1em;
+}
+
+#logo {
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+#logo img {
+    display: block;
+}
+
+#header .logoheader .rotation-image {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;	
+}
+
+.logoheader {
+    background: none repeat scroll 0 0 #FFFFFF;
+    position: relative;
+    font-weight: normal;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#header ul.menu li:hover, #header ul.menu li.current, #header ul.menu li.active {
+    background-color: black;
+    border-top: 1px solid #000000;
+}
+
+#header ul.menu li {
+	margin: 0;
+	border-top: 1px solid white;
+    display: inline-block;
+    float: left;
+    font-family: Arial,Arial,Helvetica,sans-serif;
+    margin-right: 10px;
+    padding: 3px 0;
+    text-align: left;
+    width: 130px;
+}
+
+#header ul.menu li.active a {
+    font-weight: bold;
+}
+
+#header ul.menu li.active a:link, #header ul.menu li.active a:visited {
+    color: #FFFFFF;
+}
+
+#header ul.menu li a:link, #header ul.menu li a:visited {
+    background-color: transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    padding: 2px 3px;
+    width: 100%;
+	margin: 0;
+	text-decoration: none;
+}
+
+.mod-languages {
+    margin-right: 10px;
+    text-align: right;
+}
+
+div.mod-languages ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.lang-inline {
+    display: inline-block;
+    width: 300px;
+}
+
+div.mod-languages ul.lang-inline li {
+    display: inline;
+}
+
+ul.lang-inline li {
+    border-top: 1px solid #FFFFFF;
+    display: inline-block;
+    float: right;
+    height: 25px;
+    margin-left: 10px;
+    padding-top: 2px;
+    text-align: left;
+    width: 130px;
+}
+
+div.mod-languages li {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+ul.lang-inline li a {
+    color: #FFFFFF;
+    display: inline-block;
+    font-weight: normal;
+    margin-left: -4px;
+    padding: 4px 0;
+    text-transform: capitalize !important;
+    width: 130px;
+}
+
+div.mod-languages a {
+    text-decoration: none;
+}
+
+a {  text-decoration: none }
+
+a:link {
+	color: #BF7000;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+
+a:visited {
+	color: #BF7000;
+}
+
+
+ul.lang-inline li.lang-active {
+    background-color: transparent;
+    color: white;
+}
+
+ul.lang-inline li.lang-active a {
+    color: white;
+	font-weight: normal;
+}
+
+ul.homelistH {
+	list-style: none;
+	margin: 0;
+	padding: 1em;
+	font-size: 12pt;
+}
+
+ul.homelistH li {
+	padding-top:5px;
+}
+
+ul.homelistH li a{
+	color:black;
+}
+
+ul.articlelistH {
+	list-style: square;
+	margin: 0;
+	padding: 1em;
+	font-size: 12pt;
+}
+
+h2.homepage {
+	font-size: 14pt;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 0 0 0.5em;
+	color:black;
+}
+
+#header ul li a:link, #header ul li a:visited {
+    display: inline;
+    padding: 10px;
+}
+
+img{
+	border: none;
+}
+
+div.mainbodyTT{	
+	font-size: 11pt;
+    font-weight: normal;
+    margin-right:20px;
+	
+}
+
+.mainbodyTT p { 
+	margin-top: 15px;
+}
+
+.mainbodyTT h4 { 
+	margin-top: 15px;
+}
+
+#footer {
+clear: both;
+background: #444;
+}
+
+#footer ul {
+margin: 0 auto;
+width: 60em;
+padding: 2em 0;
+color: #bbb;
+list-style: none outside none;
+}
+
+
+#footer ul li {
+font-size: 90%;
+}
+
+#footer ul li a {
+color: #bbb;
+text-decoration: none;
+}
+
+#footer ul li a:hover {
+	color: white;
+}
